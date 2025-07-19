@@ -11,258 +11,258 @@
     <style>
         /* Base styles for the body using Inter font and a light background */
         body {
-            font-family: 'Inter', sans-serif; [cite_start]/* [cite: 204] */
-            background-color: #f8fafc; [cite_start]/* Light Gray from Tailwind's default color palette [cite: 204] */
-            scroll-behavior: smooth; [cite_start]/* Enables smooth scrolling when clicking navigation links [cite: 205] */
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light Gray from Tailwind's default color palette */
+            scroll-behavior: smooth; /* Enables smooth scrolling when clicking navigation links */
         }
         /* Styling for the hero section with a vibrant gradient background */
         .hero-section {
-            background: linear-gradient(135deg, #4c51bf, #667eea); [cite_start]/* A blend of darker and lighter purple [cite: 206] */
-            color: white; [cite_start]/* White text for contrast [cite: 207] */
-            padding: 8rem 0; [cite_start]/* Ample vertical padding [cite: 208] */
+            background: linear-gradient(135deg, #4c51bf, #667eea); /* A blend of darker and lighter purple */
+            color: white; /* White text for contrast */
+            padding: 8rem 0; /* Ample vertical padding */
         }
         /* Styling for main section headings */
         .section-heading {
-            color: #1a202c; [cite_start]/* Dark text for readability [cite: 209] */
+            color: #1a202c; /* Dark text for readability */
         }
         /* Service card styling with transitions for interactive effects */
         .service-card:hover {
-            transform: translateY(-5px); [cite_start]/* Moves the card up slightly [cite: 210] */
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); [cite_start]/* Adds a subtle shadow [cite: 211] */
+            transform: translateY(-5px); /* Moves the card up slightly */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Adds a subtle shadow */
         }
         /* Custom scrollbar for improved aesthetics across browsers */
         ::-webkit-scrollbar {
-            width: 8px; [cite_start]/* Width of the scrollbar [cite: 212] */
+            width: 8px; /* Width of the scrollbar */
         }
         ::-webkit-scrollbar-track {
-            background: #f1f5f9; [cite_start]/* Light track color [cite: 213] */
-            border-radius: 10px; [cite_start]/* Rounded corners for the track [cite: 214] */
+            background: #f1f5f9; /* Light track color */
+            border-radius: 10px; /* Rounded corners for the track */
         }
         ::-webkit-scrollbar-thumb {
-            background: #cbd5e1; [cite_start]/* Gray thumb color [cite: 215] */
-            border-radius: 10px; [cite_start]/* Rounded corners for the thumb [cite: 216] */
+            background: #cbd5e1; /* Gray thumb color */
+            border-radius: 10px; /* Rounded corners for the thumb */
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8; [cite_start]/* Darker gray on hover [cite: 217] */
+            background: #94a3b8; /* Darker gray on hover */
         }
         /* Styling for the new custom contact form */
         .contact-form-container {
-            max-width: 700px; [cite_start]/* Max width for the form itself [cite: 218] */
-            margin: 0 auto; [cite_start]/* Center the form [cite: 219] */
-            background-color: white; [cite_start]/* White background [cite: 220] */
-            padding: 2.5rem; [cite_start]/* Padding inside the form [cite: 221] */
-            border-radius: 0.5rem; [cite_start]/* Rounded corners [cite: 222] */
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); [cite_start]/* Subtle shadow [cite: 223] */
+            max-width: 700px; /* Max width for the form itself */
+            margin: 0 auto; /* Center the form */
+            background-color: white; /* White background */
+            padding: 2.5rem; /* Padding inside the form */
+            border-radius: 0.5rem; /* Rounded corners */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Subtle shadow */
         }
         .contact-form-container input[type="text"],
         .contact-form-container input[type="email"],
         .contact-form-container textarea {
-            width: 100%; [cite_start]/* Full width inputs [cite: 224] */
-            padding: 0.75rem; [cite_start]/* Padding inside inputs [cite: 225] */
-            border: 1px solid #e2e8f0; [cite_start]/* Light gray border [cite: 226] */
-            border-radius: 0.375rem; [cite_start]/* Slightly rounded corners for inputs [cite: 227] */
-            margin-bottom: 1rem; [cite_start]/* Space below inputs [cite: 228] */
-            background-color: #f8fafc; [cite_start]/* Light background for inputs [cite: 229] */
-            font-size: 1rem; [cite_start]/* Standard font size [cite: 230] */
-            color: #4a5568; [cite_start]/* Dark gray text [cite: 231] */
-            outline: none; [cite_start]/* Remove outline on focus [cite: 232] */
-            transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out; [cite_start]/* [cite: 233] */
+            width: 100%; /* Full width inputs */
+            padding: 0.75rem; /* Padding inside inputs */
+            border: 1px solid #e2e8f0; /* Light gray border */
+            border-radius: 0.375rem; /* Slightly rounded corners for inputs */
+            margin-bottom: 1rem; /* Space below inputs */
+            background-color: #f8fafc; /* Light background for inputs */
+            font-size: 1rem; /* Standard font size */
+            color: #4a5568; /* Dark gray text */
+            outline: none; /* Remove outline on focus */
+            transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* */
         }
         .contact-form-container input[type="text"]:focus,
         .contact-form-container input[type="email"]:focus,
         .contact-form-container textarea:focus {
-            border-color: #6366f1; [cite_start]/* Indigo border on focus [cite: 234] */
-            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2); [cite_start]/* Light indigo shadow on focus [cite: 235] */
+            border-color: #6366f1; /* Indigo border on focus */
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2); /* Light indigo shadow on focus */
         }
         .contact-form-container textarea {
-            min-height: 120px; [cite_start]/* Minimum height for textarea [cite: 236] */
-            resize: vertical; [cite_start]/* Allow vertical resizing [cite: 237] */
+            min-height: 120px; /* Minimum height for textarea */
+            resize: vertical; /* Allow vertical resizing */
         }
         .contact-form-container button {
-            display: inline-block; [cite_start]/* [cite: 238] */
-            background-color: #4f46e5; [cite_start]/* Indigo button background [cite: 238] */
-            color: white; [cite_start]/* White text [cite: 239] */
-            font-weight: 700; [cite_start]/* Bold font [cite: 240] */
-            padding: 0.75rem 2rem; [cite_start]/* Padding for button [cite: 241] */
-            border-radius: 9999px; [cite_start]/* Fully rounded button [cite: 242] */
-            transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out; [cite_start]/* [cite: 243] */
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); [cite_start]/* Subtle shadow [cite: 244] */
+            display: inline-block; /* */
+            background-color: #4f46e5; /* Indigo button background */
+            color: white; /* White text */
+            font-weight: 700; /* Bold font */
+            padding: 0.75rem 2rem; /* Padding for button */
+            border-radius: 9999px; /* Fully rounded button */
+            transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out; /* */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Subtle shadow */
         }
         .contact-form-container button:hover {
-            background-color: #4338ca; [cite_start]/* Darker indigo on hover [cite: 245] */
-            transform: translateY(-2px); [cite_start]/* Slight lift on hover [cite: 246] */
+            background-color: #4338ca; /* Darker indigo on hover */
+            transform: translateY(-2px); /* Slight lift on hover */
         }
 
         /* --- NEW CSS FOR TEAM SECTION --- */
         #our-team {
-            padding: 6rem 1rem; [cite_start]/* Consistent padding with other sections [cite: 247] */
-            background-color: #f1f5f9; [cite_start]/* A slightly different light gray for variety [cite: 248] */
-            text-align: center; [cite_start]/* [cite: 249] */
+            padding: 6rem 1rem; /* Consistent padding with other sections */
+            background-color: #f1f5f9; /* A slightly different light gray for variety */
+            text-align: center; /* */
         }
 
         #our-team .section-heading {
-            margin-bottom: 3rem; [cite_start]/* Space below heading [cite: 250] */
+            margin-bottom: 3rem; /* Space below heading */
         }
 
         .team-member-card {
-            background-color: #ffffff; [cite_start]/* [cite: 251] */
-            border-radius: 0.75rem; [cite_start]/* Rounded corners [cite: 251] */
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); [cite_start]/* Subtle shadow [cite: 252] */
-            padding: 2.5rem; [cite_start]/* Ample padding inside card [cite: 253] */
-            margin: 1.5rem auto; [cite_start]/* Center individual cards [cite: 254] */
-            max-width: 400px; [cite_start]/* Max width for a single team member card [cite: 255] */
-            text-align: center; [cite_start]/* Center content within the card [cite: 256] */
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; [cite_start]/* [cite: 257] */
-            border: 1px solid #e2e8f0; [cite_start]/* Light border [cite: 257] */
+            background-color: #ffffff; /* */
+            border-radius: 0.75rem; /* Rounded corners */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+            padding: 2.5rem; /* Ample padding inside card */
+            margin: 1.5rem auto; /* Center individual cards */
+            max-width: 400px; /* Max width for a single team member card */
+            text-align: center; /* Center content within the card */
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* */
+            border: 1px solid #e2e8f0; /* Light border */
         }
 
         .team-member-card:hover {
-            transform: translateY(-5px); [cite_start]/* [cite: 258] */
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.08); [cite_start]/* [cite: 259] */
+            transform: translateY(-5px); /* */
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.08); /* */
         }
 
         .team-member-card h3 {
-            font-size: 2em; [cite_start]/* Larger name [cite: 260] */
-            font-weight: 700; [cite_start]/* Bold name [cite: 261] */
-            color: #1a202c; [cite_start]/* Dark text [cite: 262] */
-            margin-bottom: 0.5rem; [cite_start]/* [cite: 263] */
+            font-size: 2em; /* Larger name */
+            font-weight: 700; /* Bold name */
+            color: #1a202c; /* Dark text */
+            margin-bottom: 0.5rem; /* */
         }
 
         .team-member-card p {
-            font-size: 1.1em; [cite_start]/* [cite: 264] */
-            color: #4a5568; [cite_start]/* [cite: 264] */
+            font-size: 1.1em; /* */
+            color: #4a5568; /* */
             margin-bottom: 0.5rem;
             line-height: 1.5;
         }
 
         .team-member-card p strong {
-            color: #333; [cite_start]/* [cite: 265] */
+            color: #333; /* */
         }
 
         .team-member-card .description {
-            font-size: 1em; [cite_start]/* [cite: 266] */
-            color: #64748b; [cite_start]/* Slightly lighter gray for description [cite: 266] */
-            margin-top: 1rem; [cite_start]/* [cite: 267] */
+            font-size: 1em; /* */
+            color: #64748b; /* Slightly lighter gray for description */
+            margin-top: 1rem; /* */
         }
 
         /* New CSS for team member image */
         .team-member-card img {
-            width: 120px; [cite_start]/* Fixed width for the image [cite: 268] */
-            height: 120px; [cite_start]/* Fixed height for the image [cite: 269] */
-            border-radius: 50%; [cite_start]/* Make it circular [cite: 270] */
-            object-fit: cover; [cite_start]/* Ensure the image covers the area without distortion [cite: 271] */
-            margin: 0 auto 1.5rem auto; [cite_start]/* Center the image and add space below [cite: 272] */
-            border: 4px solid #667eea; [cite_start]/* A border matching your theme [cite: 273] */
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); [cite_start]/* [cite: 274] */
+            width: 120px; /* Fixed width for the image */
+            height: 120px; /* Fixed height for the image */
+            border-radius: 50%; /* Make it circular */
+            object-fit: cover; /* Ensure the image covers the area without distortion */
+            margin: 0 auto 1.5rem auto; /* Center the image and add space below */
+            border: 4px solid #667eea; /* A border matching your theme */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* */
         }
         /* --- END NEW CSS --- */
 
         /* --- NEW CSS FOR CLIENT REVIEWS SECTION (CAROUSEL) --- */
         #client-reviews { /* Changed ID from palak-reviews to client-reviews */
-            padding: 6rem 1rem; [cite_start]/* [cite: 275] */
-            background-color: #e2e8f0; [cite_start]/* A slightly darker light gray for contrast [cite: 275] */
-            text-align: center; [cite_start]/* [cite: 276] */
-            position: relative; [cite_start]/* Needed for absolute positioning of nav buttons [cite: 276] */
+            padding: 6rem 1rem; /* */
+            background-color: #e2e8f0; /* A slightly darker light gray for contrast */
+            text-align: center; /* */
+            position: relative; /* Needed for absolute positioning of nav buttons */
         }
 
         #client-reviews .section-heading {
-            margin-bottom: 3rem; [cite_start]/* [cite: 277] */
+            margin-bottom: 3rem; /* */
         }
 
         .carousel-container {
-            position: relative; [cite_start]/* [cite: 278] */
-            max-width: 800px; [cite_start]/* Max width for the carousel itself [cite: 278] */
-            margin: 0 auto; [cite_start]/* [cite: 279] */
-            overflow: hidden; [cite_start]/* Hide reviews outside the current view [cite: 279] */
-            border-radius: 0.75rem; [cite_start]/* [cite: 280] */
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); [cite_start]/* [cite: 280] */
-            background-color: #ffffff; [cite_start]/* Background for the carousel area [cite: 281] */
+            position: relative; /* */
+            max-width: 800px; /* Max width for the carousel itself */
+            margin: 0 auto; /* */
+            overflow: hidden; /* Hide reviews outside the current view */
+            border-radius: 0.75rem; /* */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* */
+            background-color: #ffffff; /* Background for the carousel area */
         }
 
         .carousel-track {
-            display: flex; [cite_start]/* [cite: 282] */
-            transition: transform 0.5s ease-in-out; [cite_start]/* Smooth slide transition [cite: 282] */
-            will-change: transform; [cite_start]/* Optimize for animation [cite: 283] */
+            display: flex; /* */
+            transition: transform 0.5s ease-in-out; /* Smooth slide transition */
+            will-change: transform; /* Optimize for animation */
         }
 
         .review-card {
-            min-width: 100%; [cite_start]/* Each card takes full width of its parent (carousel-container) [cite: 284] */
-            box-sizing: border-box; [cite_start]/* Include padding/border in width [cite: 285] */
-            padding: 2.5rem; [cite_start]/* [cite: 286] */
-            text-align: left; [cite_start]/* [cite: 286] */
-            flex-shrink: 0; [cite_start]/* Prevent cards from shrinking [cite: 286] */
-            flex-grow: 0; [cite_start]/* Prevent cards from growing [cite: 287] */
-            width: 100%; [cite_start]/* Explicitly set width to 100% [cite: 288] */
+            min-width: 100%; /* Each card takes full width of its parent (carousel-container) */
+            box-sizing: border-box; /* Include padding/border in width */
+            padding: 2.5rem; /* */
+            text-align: left; /* */
+            flex-shrink: 0; /* Prevent cards from shrinking */
+            flex-grow: 0; /* Prevent cards from growing */
+            width: 100%; /* Explicitly set width to 100% */
         }
 
         .review-card h3 {
-            font-size: 1.6em; [cite_start]/* Project title [cite: 289] */
+            font-size: 1.6em; /* Project title */
             font-weight: 600;
-            color: #334155; [cite_start]/* Darker gray for project title [cite: 290] */
-            margin-bottom: 0.5rem; [cite_start]/* [cite: 291] */
+            color: #334155; /* Darker gray for project title */
+            margin-bottom: 0.5rem; /* */
         }
 
         .review-card .client-info {
-            font-size: 1em; [cite_start]/* [cite: 292] */
-            color: #64748b; [cite_start]/* [cite: 292] */
+            font-size: 1em; /* */
+            color: #64748b; /* */
             margin-bottom: 1rem;
             font-style: italic;
         }
 
         .review-card .review-text {
-            font-size: 1.05em; [cite_start]/* [cite: 293] */
-            color: #475569; [cite_start]/* [cite: 293] */
+            font-size: 1.05em; /* */
+            color: #475569; /* */
             line-height: 1.7;
-            overflow-y: auto; [cite_start]/* Add scroll if text is too long [cite: 293] */
-            max-height: 200px; [cite_start]/* Limit height to prevent excessive stretching [cite: 294] */
+            overflow-y: auto; /* Add scroll if text is too long */
+            max-height: 200px; /* Limit height to prevent excessive stretching */
         }
 
         .carousel-button {
-            position: absolute; [cite_start]/* [cite: 295] */
-            top: 50%; [cite_start]/* [cite: 295] */
-            transform: translateY(-50%); [cite_start]/* [cite: 295] */
-            background-color: rgba(0, 0, 0, 0.5); [cite_start]/* Semi-transparent black [cite: 295] */
-            color: white; [cite_start]/* [cite: 296] */
+            position: absolute; /* */
+            top: 50%; /* */
+            transform: translateY(-50%); /* */
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+            color: white; /* */
             border: none;
             padding: 0.75rem 1rem;
             cursor: pointer;
             font-size: 1.5rem;
             border-radius: 0.375rem;
             transition: background-color 0.3s ease;
-            z-index: 10; [cite_start]/* Ensure buttons are above content [cite: 297] */
+            z-index: 10; /* Ensure buttons are above content */
         }
 
         .carousel-button:hover {
-            background-color: rgba(0, 0, 0, 0.7); [cite_start]/* [cite: 298] */
+            background-color: rgba(0, 0, 0, 0.7); /* */
         }
 
         .carousel-button.prev {
-            left: 1rem; [cite_start]/* [cite: 299] */
+            left: 1rem; /* */
         }
 
         .carousel-button.next {
-            right: 1rem; [cite_start]/* [cite: 300] */
+            right: 1rem; /* */
         }
 
         .carousel-dots {
-            display: flex; [cite_start]/* [cite: 301] */
+            display: flex; /* */
             justify-content: center;
             margin-top: 2rem;
             gap: 0.75rem;
         }
 
         .dot {
-            width: 12px; [cite_start]/* [cite: 302] */
-            height: 12px; [cite_start]/* [cite: 302] */
-            background-color: #cbd5e1; [cite_start]/* Light gray dot [cite: 302] */
-            border-radius: 50%; [cite_start]/* [cite: 303] */
+            width: 12px; /* */
+            height: 12px; /* */
+            background-color: #cbd5e1; /* Light gray dot */
+            border-radius: 50%; /* */
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.2s ease;
         }
 
         .dot.active {
-            background-color: #4c51bf; [cite_start]/* Indigo active dot [cite: 304] */
-            transform: scale(1.2); [cite_start]/* [cite: 305] */
+            background-color: #4c51bf; /* Indigo active dot */
+            transform: scale(1.2); /* */
         }
         /* --- END NEW CSS FOR PALAK'S REVIEWS SECTION (CAROUSEL) --- */
     </style>
@@ -278,7 +278,7 @@
                 <a href="#services" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-gray-50">Services</a>
                 <a href="#about" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-gray-50">About Us</a>
                 <a href="#our-team" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-gray-50">Our Team</a>
-                [cite_start]<a href="#client-reviews" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-gray-50">Client Reviews</a> [cite: 307] <a href="#contact" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-gray-50">Contact</a>
+                <a href="#client-reviews" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-gray-50">Client Reviews</a> <a href="#contact" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-gray-50">Contact</a>
             </div>
         </nav>
     </header>
@@ -286,10 +286,10 @@
     <section id="hero" class="hero-section text-center">
         <div class="container mx-auto px-4">
             <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in">
-                [cite_start]Your Trusted Partner in Digital Transformation. [cite: 309]
+                Your Trusted Partner in Digital Transformation.
             </h1>
             <p class="text-xl md:text-2xl font-light mb-8 opacity-90 animate-fade-in-delay">
-                [cite_start]Empowering businesses with innovative web, app, and data solutions. [cite: 310]
+                Empowering businesses with innovative web, app, and data solutions.
             </p>
             <a href="#contact" class="inline-block bg-white text-indigo-700 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-indigo-50 hover:scale-105 transition duration-300 animate-slide-up">
                 Get a Free Consultation
@@ -299,7 +299,7 @@
 
     <section id="services" class="py-16 bg-white">
         <div class="container mx-auto px-4 text-center">
-            [cite_start]<h2 class="text-4xl font-extrabold section-heading mb-12">Our Core Services</h2> [cite: 311]
+            <h2 class="text-4xl font-extrabold section-heading mb-12">Our Core Services</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                 <div class="service-card bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100">
@@ -314,7 +314,7 @@
                     <div class="text-indigo-600 text-5xl mb-4">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
-                    [cite_start]<h3 class="text-xl font-semibold mb-3 text-gray-800">App Development</h3> [cite: 314]
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">App Development</h3>
                     <p class="text-gray-600">Crafting intuitive and robust mobile applications for iOS and Android, ensuring a seamless experience for your users and a powerful presence for your brand.</p>
                 </div>
 
@@ -331,14 +331,14 @@
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-3 text-gray-800">Data Analytics</h3>
-                    [cite_start]<p class="text-gray-600">Uncovering hidden patterns, trends, and valuable insights from your raw data to support strategic decision-making and business growth. [cite: 318] </p>
+                    <p class="text-gray-600">Uncovering hidden patterns, trends, and valuable insights from your raw data to support strategic decision-making and business growth. </p>
                 </div>
 
                 <div class="service-card bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100">
                     <div class="text-indigo-600 text-5xl mb-4">
                         <i class="fas fa-chart-bar"></i>
                     </div>
-                    [cite_start]<h3 class="text-xl font-semibold mb-3 text-gray-800">Tableau Dashboards</h3> [cite: 319]
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Tableau Dashboards</h3>
                     <p class="text-gray-600">Designing and developing interactive, intuitive, and visually compelling Tableau dashboards that empower users with actionable insights.</p>
                 </div>
 
@@ -346,7 +346,7 @@
                     <div class="text-indigo-600 text-5xl mb-4">
                         <i class="fas fa-chart-pie"></i>
                     </div>
-                    [cite_start]<h3 class="text-xl font-semibold mb-3 text-gray-800">Power BI Dashboards</h3> [cite: 321]
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Power BI Dashboards</h3>
                     <p class="text-gray-600">Creating dynamic and comprehensive Power BI reports and dashboards that integrate seamlessly with your Microsoft ecosystem for robust data analysis.</p>
                 </div>
 
@@ -365,15 +365,15 @@
     <section id="about" class="py-16 bg-gray-100">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-4xl font-extrabold section-heading mb-12">About Us</h2>
-            [cite_start]<div class="max-w-3xl mx-auto text-gray-700 leading-relaxed text-lg"> [cite: 324]
+            <div class="max-w-3xl mx-auto text-gray-700 leading-relaxed text-lg">
                 <p class="mb-6">
-                    [cite_start]Gupta Consultancy Services (GCS) is a distinguished firm with over 3.5 years of expertise in comprehensive data analysis, robust risk management, and cutting-edge digital solution development. [cite: 325] [cite_start]Our core philosophy is anchored in the delivery of demonstrable results and profound strategic insights. [cite: 326]
+                    Gupta Consultancy Services (GCS) is a distinguished firm with over 3.5 years of expertise in comprehensive data analysis, robust risk management, and cutting-edge digital solution development. Our core philosophy is anchored in the delivery of demonstrable results and profound strategic insights.
                 </p>
                 <p class="mb-6">
-                    [cite_start]We specialize in seamlessly integrating advanced technical capabilities with astute business understanding to yield impactful outcomes. [cite: 327] [cite_start]Our extensive experience encompasses the formulation of effective risk-mitigation policies, precise identification of financial anomalies, optimization of customer conversion through innovative data visualization, and the automation of intricate data processes. [cite: 328] [cite_start]We are committed to providing sophisticated solutions that drive efficiency, reduce operational expenditures, and facilitate well-informed strategic decisions. [cite: 329]
+                    We specialize in seamlessly integrating advanced technical capabilities with astute business understanding to yield impactful outcomes. Our extensive experience encompasses the formulation of effective risk-mitigation policies, precise identification of financial anomalies, optimization of customer conversion through innovative data visualization, and the automation of intricate data processes. We are committed to providing sophisticated solutions that drive efficiency, reduce operational expenditures, and facilitate well-informed strategic decisions.
                 </p>
                 <p>
-                    [cite_start]At GCS, we are dedicated to transforming complex challenges into strategic opportunities, leveraging the power of data and technology to foster sustainable growth and deliver substantial value for our esteemed clientele. [cite: 330]
+                    At GCS, we are dedicated to transforming complex challenges into strategic opportunities, leveraging the power of data and technology to foster sustainable growth and deliver substantial value for our esteemed clientele.
                 </p>
             </div>
         </div>
@@ -383,136 +383,136 @@
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-extrabold section-heading">Our Team</h2>
             <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-12">
-                [cite_start]Our dedicated team is at the heart of everything we do, bringing expertise and passion to every project. [cite: 331] [cite_start]We're proud to highlight our talented developers who are instrumental in bringing your vision to life. [cite: 332]
+                Our dedicated team is at the heart of everything we do, bringing expertise and passion to every project. We're proud to highlight our talented developers who are instrumental in bringing your vision to life.
             </p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center" id="team-members-container">
                 <p>Loading team members...</p>
-                </div>
+            </div>
         </div>
     </section>
     <section id="client-reviews">
         <div class="container mx-auto px-4">
-            [cite_start]<h2 class="text-4xl font-extrabold section-heading">Client Reviews</h2> [cite: 335]
+            <h2 class="text-4xl font-extrabold section-heading">Client Reviews</h2>
             <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-12">
-                [cite_start]Hear directly from our clients about the exceptional work and dedication Palak brings to every Shopify development project. [cite: 336]
+                Hear directly from our clients about the exceptional work and dedication Palak brings to every Shopify development project.
             </p>
 
             <div class="carousel-container">
                 <div class="carousel-track" id="reviewCarouselTrack">
                     <div class="review-card">
                         <h3>Upgrade Impulse to Shopify V2</h3>
-                        [cite_start]<p class="client-info">Client: Pip Guyatt</p> [cite: 337]
+                        <p class="client-info">Client: Pip Guyatt</p>
                         <p class="review-text">"Palak, has great communication skills, she offers ideas & solutions to existing problems with website that are valuable, she is very knowledgeable and very easy to work with. Will hie her again"</p>
                     </div>
 
                     <div class="review-card">
                         <h3>Build a Shopify Store with Personalisation Aspects - Personalised Storybooks Preview</h3>
-                        [cite_start]<p class="client-info">Client: Ashley West</p> [cite: 338]
-                        [cite_start]<p class="review-text">"Palak has been amazing to work with. This project has gone on for a lot longer than expected, and she stuck with me right to the end. [cite: 339, 340] [cite_start]Always had a positive attitude and wanted to make sure I was happy. [cite: 341] [cite_start]There were countless revisions and questions and she always responded to me promptly. [cite: 342] [cite_start]I can't imagine anyone having a bad experience working with her. [cite: 343] Am happy to recommend!"</p>
+                        <p class="client-info">Client: Ashley West</p>
+                        <p class="review-text">"Palak has been amazing to work with. This project has gone on for a lot longer than expected, and she stuck with me right to the end. Always had a positive attitude and wanted to make sure I was happy. There were countless revisions and questions and she always responded to me promptly. I can't imagine anyone having a bad experience working with her. Am happy to recommend!"</p>
                     </div>
 
                     <div class="review-card">
                         <h3>Website Development Needed for Small Project</h3>
-                        [cite_start]<p class="client-info">Client: Janine Cygan</p> [cite: 344]
-                        [cite_start]<p class="review-text">"Palak was amazing to work with! [cite: 345] She completely everything I asked for promptly!"</p>
+                        <p class="client-info">Client: Janine Cygan</p>
+                        <p class="review-text">"Palak was amazing to work with! She completely everything I asked for promptly!"</p>
                     </div>
 
                     <div class="review-card">
                         <h3>Experienced Shopify developer to create a professional website for a dress rental business</h3>
-                        [cite_start]<p class="client-info">Client: Jeannie Hood</p> [cite: 346]
-                        [cite_start]<p class="review-text">"We had an amazing experience working with Palak! [cite: 347] [cite_start]Before collaborating with her, we had no experience with website development, but she made the entire process incredibly smooth and stress-free. [cite: 348] [cite_start]Her clear and prompt communication ensured that we always knew what was happening and felt confident in each step of the project. [cite: 349] [cite_start]From the beginning, we provided a specific brief, and Palak was not only receptive to our vision but also took on all of our feedback with enthusiasm. [cite: 350] [cite_start]She worked diligently to bring our website to life, making thoughtful adjustments along the way to ensure it matched our expectations perfectly. [cite: 351] [cite_start]Her professionalism, attention to detail, and willingness to accommodate our requests made this an enjoyable and seamless experience. [cite: 352] We highly recommend Palak to anyone looking to build a website—her skills, efficiency, and dedication truly stand out!"</p>
+                        <p class="client-info">Client: Jeannie Hood</p>
+                        <p class="review-text">"We had an amazing experience working with Palak! Before collaborating with her, we had no experience with website development, but she made the entire process incredibly smooth and stress-free. Her clear and prompt communication ensured that we always knew what was happening and felt confident in each step of the project. From the beginning, we provided a specific brief, and Palak was not only receptive to our vision but also took on all of our feedback with enthusiasm. She worked diligently to bring our website to life, making thoughtful adjustments along the way to ensure it matched our expectations perfectly. Her professionalism, attention to detail, and willingness to accommodate our requests made this an enjoyable and seamless experience. We highly recommend Palak to anyone looking to build a website—her skills, efficiency, and dedication truly stand out!"</p>
                     </div>
 
                     <div class="review-card">
                         <h3>Shopify Expert Needed for Store Restructuring and Optimization</h3>
-                        [cite_start]<p class="client-info">Client: Charmaine Brown</p> [cite: 353]
-                        [cite_start]<p class="review-text">"⭐️⭐️⭐️⭐️⭐️ Amazing Shopify Expert! [cite: 354] [cite_start]Palak did an outstanding job optimizing and restructuring my Shopify store. [cite: 355] [cite_start]She was incredibly responsive, knowledgeable, and easy to work with throughout the entire process. [cite: 356] [cite_start]Her expertise helped streamline my store’s functionality and improve its overall design and user experience. [cite: 357] [cite_start]I truly appreciated her attention to detail and willingness to go above and beyond to ensure everything was perfect. [cite: 358] I highly recommend Palak to anyone looking for a skilled Shopify expert!"</p>
+                        <p class="client-info">Client: Charmaine Brown</p>
+                        <p class="review-text">"⭐️⭐️⭐️⭐️⭐️ Amazing Shopify Expert! Palak did an outstanding job optimizing and restructuring my Shopify store. She was incredibly responsive, knowledgeable, and easy to work with throughout the entire process. Her expertise helped streamline my store’s functionality and improve its overall design and user experience. I truly appreciated her attention to detail and willingness to go above and beyond to ensure everything was perfect. I highly recommend Palak to anyone looking for a skilled Shopify expert!"</p>
                     </div>
 
                     <div class="review-card">
                         <h3>Shopify Redesign Page</h3>
-                        [cite_start]<p class="client-info">Client: Anja Edwards</p> [cite: 359]
-                        [cite_start]<p class="review-text">"Worked with Palak on redesign of my entire website. [cite: 360] She was amazing. She is very knowledgeable, was able to get everything done in a quick and efficient manner."</p>
+                        <p class="client-info">Client: Anja Edwards</p>
+                        <p class="review-text">"Worked with Palak on redesign of my entire website. She was amazing. She is very knowledgeable, was able to get everything done in a quick and efficient manner."</p>
                     </div>
 
                     <div class="review-card">
                         <h3>Shopify Website Redesign: Create a High-End Lifestyle Experience for My Tiny Home Hub</h3>
-                        [cite_start]<p class="client-info">Client: Cameron Jovan, My Tiny Home Hub</p> [cite: 361]
-                        [cite_start]<p class="review-text">"Palak did an amazing job bringing my vision to life for the design of my product page. [cite: 362] [cite_start]It wasn't an easy task, but she was able to comprehend it with the right guidance and execute it flawlessly and in a way that didn't leave anything additional to be desired. [cite: 363] I would rate her a 10 out of 10!"</p>
+                        <p class="client-info">Client: Cameron Jovan, My Tiny Home Hub</p>
+                        <p class="review-text">"Palak did an amazing job bringing my vision to life for the design of my product page. It wasn't an easy task, but she was able to comprehend it with the right guidance and execute it flawlessly and in a way that didn't leave anything additional to be desired. I would rate her a 10 out of 10!"</p>
                     </div>
 
                     <div class="review-card">
                         <h3>Rebuild Shopify website for skincare brand</h3>
-                        [cite_start]<p class="client-info">Client: Mariela Perez Calderon</p> [cite: 364]
-                        [cite_start]<p class="review-text">"Created a beautiful website with everything that was asked for. [cite: 365] I recommended Palak to a friend of my as well!"</p>
+                        <p class="client-info">Client: Mariela Perez Calderon</p>
+                        <p class="review-text">"Created a beautiful website with everything that was asked for. I recommended Palak to a friend of my as well!"</p>
                     </div>
 
                     <div class="review-card">
                         <h3>Re-design of existing Shopify store with updates</h3>
-                        [cite_start]<p class="client-info">Client: Dennis Rambo</p> [cite: 366]
-                        [cite_start]<p class="review-text">"Attention to detail and dedication. [cite: 367] Quick to respond to any queries, receptive to feedback, and consistently met project milestones."</p>
+                        <p class="client-info">Client: Dennis Rambo</p>
+                        <p class="review-text">"Attention to detail and dedication. Quick to respond to any queries, receptive to feedback, and consistently met project milestones."</p>
                     </div>
 
                     <div class="review-card">
                         <h3>Shopify enhancements - dynamic text based on tags</h3>
-                        [cite_start]<p class="client-info">Client: Michael Roedeske, P4P Solutions GmbH</p> [cite: 368]
-                        [cite_start]<p class="review-text">"Highly skilled and experiences Shopify and HTML developer. [cite: 369] Clear communicationa and in-time delivery. We realized already several enhancements with her support."</p>
+                        <p class="client-info">Client: Michael Roedeske, P4P Solutions GmbH</p>
+                        <p class="review-text">"Highly skilled and experiences Shopify and HTML developer. Clear communicationa and in-time delivery. We realized already several enhancements with her support."</p>
                     </div>
 
                     <div class="review-card">
                         <h3>Shopify Store Developer</h3>
-                        [cite_start]<p class="client-info">Client: Joyce Hwang</p> [cite: 370]
-                        [cite_start]<p class="review-text">"I had the pleasure of working with Palak. [cite: 371] She is great at meeting deadlines and is very responsive and flexible. [cite_start]High quality of work and very professional! [cite: 372] Definitely will continue to work with her!"</p>
+                        <p class="client-info">Client: Joyce Hwang</p>
+                        <p class="review-text">"I had the pleasure of working with Palak. She is great at meeting deadlines and is very responsive and flexible. High quality of work and very professional! Definitely will continue to work with her!"</p>
                     </div>
                 </div>
 
                 <button class="carousel-button prev" id="prevReviewBtn">&#10094;</button>
                 <button class="carousel-button next" id="nextReviewBtn">&#10095;</button>
             </div>
-            [cite_start]<div class="carousel-dots" id="carouselDots"></div> [cite: 373]
+            <div class="carousel-dots" id="carouselDots"></div>
         </div>
     </section>
     <section id="contact" class="py-16 bg-indigo-700 text-white text-center">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-extrabold mb-8">Ready to Start Your Project?</h2>
             <p class="text-xl font-light mb-10 max-w-2xl mx-auto opacity-90">
-                [cite_start]Let's discuss how we can help you achieve your business goals with our expert web development, app development, and data analytics services. [cite: 374]
+                Let's discuss how we can help you achieve your business goals with our expert web development, app development, and data analytics services.
             </p>
             <div class="contact-form-container text-left">
                 <form action="https://formspree.io/f/xvgrbzeg" method="POST">
                     <div class="mb-4">
-                        [cite_start]<label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name:</label> [cite: 375]
+                        <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name:</label>
                         <input type="text" id="name" name="name" placeholder="Your Name" required
                                class="shadow-sm appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
                     </div>
-                    [cite_start]<div class="mb-4"> [cite: 376]
+                    <div class="mb-4">
                         <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
                         <input type="email" id="email" name="_replyto" placeholder="your@email.com" required
-                               [cite_start]class="shadow-sm appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"> [cite: 377]
+                               class="shadow-sm appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
                     </div>
                     <div class="mb-6">
                         <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message:</label>
                         <textarea id="message" name="message" rows="5" placeholder="Your message here..." required
-                                  [cite_start]class="shadow-sm appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"></textarea> [cite: 378]
+                                  class="shadow-sm appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"></textarea>
                     </div>
-                    [cite_start]<div class="text-center"> [cite: 379]
+                    <div class="text-center">
                         <button type="submit"
                                 class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-full focus:outline-none focus:shadow-outline transition duration-300 ease-in-out transform hover:-translate-y-1">
-                            [cite_start]Send Message [cite: 380]
+                            Send Message
                         </button>
                     </div>
                 </form>
             </div>
             <p class="text-xs text-indigo-200 mt-4">
-                [cite_start]*Please visit Formspree.io (or a similar service) to get your unique form endpoint and replace "YOUR_FORMSPREE_ENDPOINT_HERE" in the HTML. [cite: 382]
+                *Please visit Formspree.io (or a similar service) to get your unique form endpoint and replace "YOUR_FORMSPREE_ENDPOINT_HERE" in the HTML.
             </p>
         </div>
     </section>
 
     <footer class="bg-gray-800 text-gray-300 py-8">
         <div class="container mx-auto px-4 text-center text-sm">
-            <p>&copy; 2025 Gupta Consultancy Services (GCS). [cite_start]All rights reserved.</p> [cite: 383]
+            <p>&copy; 2025 Gupta Consultancy Services (GCS). All rights reserved.</p>
             <p class="mt-2">Contact: <a href="mailto:gcs.consultancy.in@gmail.com" class="text-indigo-400 hover:underline">gcs.consultancy.in@gmail.com</a></p>
             <p class="mt-1">
                 <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_PROFILE_ID" target="_blank" class="text-indigo-400 hover:underline">Connect with GCS on LinkedIn</a>
@@ -521,64 +521,64 @@
     </footer>
 
     <script>
-        [cite_start]// Smooth scrolling for navigation links [cite: 384]
+        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault(); // Prevent default anchor click behavior
 
                 // Scroll to the target section smoothly
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    [cite_start]behavior: 'smooth' [cite: 385]
+                    behavior: 'smooth'
                 });
             });
         });
 
-        [cite_start]// --- Carousel Functionality for Client Reviews --- [cite: 386]
-        [cite_start]const carouselTrack = document.getElementById('reviewCarouselTrack'); [cite: 387]
-        [cite_start]const reviewCards = Array.from(carouselTrack.children); [cite: 387]
+        // --- Carousel Functionality for Client Reviews ---
+        const carouselTrack = document.getElementById('reviewCarouselTrack');
+        const reviewCards = Array.from(carouselTrack.children);
         const prevBtn = document.getElementById('prevReviewBtn');
         const nextBtn = document.getElementById('nextReviewBtn');
         const carouselDotsContainer = document.getElementById('carouselDots');
 
-        [cite_start]let currentIndex = 0; [cite: 388]
-        [cite_start]let autoSlideInterval; [cite: 388]
-        const slideIntervalTime = 5000; [cite_start]// 5 seconds [cite: 388]
+        let currentIndex = 0;
+        let autoSlideInterval;
+        const slideIntervalTime = 5000; // 5 seconds
 
         // Function to update carousel position
         function updateCarousel() {
-            const offset = -currentIndex * 100; [cite_start]// Each slide is 100% width [cite: 389]
-            [cite_start]carouselTrack.style.transform = `translateX(${offset}%)`; [cite: 390]
-            [cite_start]updateDots(); [cite: 390]
+            const offset = -currentIndex * 100; // Each slide is 100% width
+            carouselTrack.style.transform = `translateX(${offset}%)`;
+            updateDots();
         }
 
         // Function to move to the next slide
         function showNextSlide() {
-            [cite_start]currentIndex = (currentIndex + 1) % reviewCards.length; [cite: 391]
-            [cite_start]updateCarousel(); [cite: 391]
+            currentIndex = (currentIndex + 1) % reviewCards.length;
+            updateCarousel();
         }
 
         // Function to move to the previous slide
         function showPrevSlide() {
-            [cite_start]currentIndex = (currentIndex - 1 + reviewCards.length) % reviewCards.length; [cite: 392]
-            [cite_start]updateCarousel(); [cite: 392]
+            currentIndex = (currentIndex - 1 + reviewCards.length) % reviewCards.length;
+            updateCarousel();
         }
 
         // Function to create and update pagination dots
         function createDots() {
-            carouselDotsContainer.innerHTML = ''; [cite_start]// Clear existing dots [cite: 393]
+            carouselDotsContainer.innerHTML = ''; // Clear existing dots
             reviewCards.forEach((_, index) => {
                 const dot = document.createElement('span');
                 dot.classList.add('dot');
                 if (index === currentIndex) {
-                    [cite_start]dot.classList.add('active'); [cite: 394]
+                    dot.classList.add('active');
                 }
                 dot.addEventListener('click', () => {
                     currentIndex = index;
                     updateCarousel();
-                    [cite_start]resetAutoSlide(); // Reset timer on manual navigation [cite: 395]
+                    resetAutoSlide(); // Reset timer on manual navigation
                 });
                 carouselDotsContainer.appendChild(dot);
-            [cite_start]}); [cite: 396]
+            });
         }
 
         // Function to update active dot
@@ -587,45 +587,88 @@
                 if (index === currentIndex) {
                     dot.classList.add('active');
                 } else {
-                    [cite_start]dot.classList.remove('active'); [cite: 397]
+                    dot.classList.remove('active');
                 }
-            [cite_start]}); [cite: 398]
+            });
         }
 
         // Function to start automatic sliding
         function startAutoSlide() {
-            [cite_start]autoSlideInterval = setInterval(showNextSlide, slideIntervalTime); [cite: 399]
+            autoSlideInterval = setInterval(showNextSlide, slideIntervalTime);
         }
 
         // Function to reset automatic sliding (e.g., after manual navigation)
         function resetAutoSlide() {
-            [cite_start]clearInterval(autoSlideInterval); [cite: 400]
-            [cite_start]startAutoSlide(); [cite: 400]
+            clearInterval(autoSlideInterval);
+            startAutoSlide();
         }
 
         // Event Listeners for navigation buttons
         prevBtn.addEventListener('click', () => {
             showPrevSlide();
             resetAutoSlide(); // Reset timer on manual navigation
-        [cite_start]}); [cite: 401]
+        });
         nextBtn.addEventListener('click', () => {
             showNextSlide();
             resetAutoSlide(); // Reset timer on manual navigation
-        [cite_start]}); [cite: 402]
+        });
 
         // Initialize carousel on page load
         document.addEventListener('DOMContentLoaded', () => {
             if (reviewCards.length > 0) {
-                [cite_start]createDots(); // Create dots initially [cite: 403]
-                updateCarousel(); [cite_start]// Set initial position [cite: 403]
-                startAutoSlide(); [cite_start]// Start auto-sliding [cite: 403]
+                createDots(); // Create dots initially
+                updateCarousel(); // Set initial position
+                startAutoSlide(); // Start auto-sliding
             }
         });
-        [cite_start]// --- End Carousel Functionality --- [cite: 404]
+        // --- End Carousel Functionality ---
 
 
         // --- Google Sheets Team Members Loading Functionality ---
         const GOOGLE_SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR-9ZE-RHcbVh69G9Hrk8cM_gy6hDbYwHFM_fCFiMgR5-HyHEHq46yGsROD-0nmpOi-gc_6XWpJIMPx/pub?gid=0&single=true&output=csv';
+
+        // More robust CSV parser function
+        function parseCSV(text) {
+            const rows = [];
+            let inQuote = false;
+            let currentCell = '';
+            let currentRow = [];
+
+            for (let i = 0; i < text.length; i++) {
+                const char = text[i];
+                const nextChar = text[i + 1];
+
+                if (char === '"') {
+                    if (inQuote && nextChar === '"') { // Handle escaped double quotes ""
+                        currentCell += char;
+                        i++; // Skip next quote
+                    } else {
+                        inQuote = !inQuote; // Toggle quote state
+                    }
+                } else if (char === ',' && !inQuote) {
+                    currentRow.push(currentCell.trim());
+                    currentCell = '';
+                } else if (char === '\n' && !inQuote) {
+                    // Handle CRLF and LF line endings
+                    if (i > 0 && text[i - 1] === '\r') {
+                        currentCell = currentCell.slice(0, -1); // Remove trailing CR if LF follows
+                    }
+                    currentRow.push(currentCell.trim());
+                    rows.push(currentRow);
+                    currentRow = [];
+                    currentCell = '';
+                } else {
+                    currentCell += char;
+                }
+            }
+            // Add the last row if the CSV doesn't end with a newline
+            if (currentCell || currentRow.length > 0) {
+                currentRow.push(currentCell.trim());
+                rows.push(currentRow);
+            }
+            return rows.filter(row => row.some(cell => cell !== '')); // Filter out entirely empty rows
+        }
+
 
         async function fetchTeamMembers() {
             const teamContainer = document.getElementById('team-members-container');
@@ -633,7 +676,7 @@
                 console.error("Error: Element with ID 'team-members-container' not found.");
                 return;
             }
-            teamContainer.innerHTML = '<p>Loading team members...</p>'; // Initial loading message
+            teamContainer.innerHTML = '<p>Loading team members...</p>';
 
             try {
                 console.log('Attempting to fetch team data from:', GOOGLE_SHEET_CSV_URL);
@@ -646,11 +689,11 @@
                 }
 
                 const csvText = await response.text();
-                console.log('CSV team data fetched successfully (first 200 chars):', csvText.substring(0, 200) + '...'); 
+                console.log('CSV team data fetched successfully (first 200 chars):', csvText.substring(0, Math.min(csvText.length, 200)) + '...'); 
 
-                // Parse CSV data: Split by newline, then by comma. Trim cells and remove surrounding quotes.
-                const rows = csvText.split('\n').map(row => row.split(',').map(cell => cell.trim().replace(/^"|"$/g, '')));
-                console.log('Parsed team rows:', rows);
+                // Use the new parseCSV function
+                const rows = parseCSV(csvText);
+                console.log('Parsed team rows (using robust parser):', rows);
 
                 if (rows.length < 2) { 
                     teamContainer.innerHTML = '<p>No team member data found in the Google Sheet, or the sheet is empty (only headers).</p>';
@@ -658,7 +701,6 @@
                     return;
                 }
 
-                // Normalize headers (e.g., "Image Url" becomes "imageurl") for consistent lookup
                 const headers = rows[0].map(header => header.toLowerCase().replace(/\s/g, '')); 
                 console.log('Normalized Headers from team sheet:', headers);
 
@@ -671,25 +713,26 @@
                 let membersRendered = 0;
 
                 teamMembersData.forEach((row, rowIndex) => {
-                    // Skip empty rows that might appear due to extra newlines in CSV
-                    if (row.length === 0 || row.every(cell => cell === '')) {
-                        console.log(`Skipping empty row at index ${rowIndex + 1} in team data.`);
-                        return;
-                    }
-
                     // Find column indices dynamically using normalized headers
                     const nameIndex = headers.indexOf('name');
-                    const roleIndex = headers.indexOf('role'); // Updated header
-                    const experienceIndex = headers.indexOf('experience'); // New header
-                    const aboutIndex = headers.indexOf('about'); // Updated header (was 'description')
-                    const imageUrlIndex = headers.indexOf('imageurl'); // New header
-                    const linkedInIndex = headers.indexOf('linkedin'); // New header
+                    const roleIndex = headers.indexOf('role'); 
+                    const experienceIndex = headers.indexOf('experience');
+                    const aboutIndex = headers.indexOf('about');
+                    const imageUrlIndex = headers.indexOf('imageurl');
+                    const linkedInIndex = headers.indexOf('linkedin');
 
                     // Ensure essential columns exist for this row
                     if (nameIndex === -1 || roleIndex === -1 || aboutIndex === -1) {
-                        console.warn(`Skipping row ${rowIndex + 1}: Missing "Name", "Role", or "About" column in Google Sheet data. Row:`, row);
-                        return;
+                        console.warn(`Skipping row ${rowIndex + 1} due to missing "Name", "Role", or "About" header in the data. Raw row:`, row);
+                        return; // Skip this row if critical headers are missing
                     }
+                    
+                    // Also ensure the actual data for these columns exists in the current row
+                    if (!row[nameIndex] || !row[roleIndex] || !row[aboutIndex]) {
+                         console.warn(`Skipping row ${rowIndex + 1} due to empty "Name", "Role", or "About" data. Raw row:`, row);
+                         return;
+                    }
+
 
                     const name = row[nameIndex] || 'Unknown Member';
                     const role = row[roleIndex] || 'No role provided.';
@@ -700,7 +743,7 @@
 
                     // Create the HTML elements for each team member, matching the provided image format
                     const memberDiv = document.createElement('div');
-                    memberDiv.classList.add('team-member-card'); // Use the existing CSS class
+                    memberDiv.classList.add('team-member-card');
 
                     const memberImage = document.createElement('img');
                     memberImage.src = imageUrl;
@@ -712,15 +755,15 @@
                     memberDiv.appendChild(memberName);
 
                     const memberRole = document.createElement('p');
-                    memberRole.innerHTML = `<strong>Title:</strong> ${role}`; // Match "Title:" format
+                    memberRole.innerHTML = `<strong>Title:</strong> ${role}`;
                     memberDiv.appendChild(memberRole);
 
                     const memberExperience = document.createElement('p');
-                    memberExperience.innerHTML = `<strong>Experience:</strong> ${experience}`; // Match "Experience:" format
+                    memberExperience.innerHTML = `<strong>Experience:</strong> ${experience}`;
                     memberDiv.appendChild(memberExperience);
 
                     const memberAbout = document.createElement('p');
-                    memberAbout.classList.add('description'); // Use existing description class for styling
+                    memberAbout.classList.add('description');
                     memberAbout.textContent = about;
                     memberDiv.appendChild(memberAbout);
 
