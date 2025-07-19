@@ -43,7 +43,9 @@
             font-size: 0.9em;
             color: #666;
             line-height: 1.5;
-            min-height: 60px; /* Ensure consistent height for description */
+            min-height: 60px; /* Ensure consistent height for description/role */
+            overflow: hidden; /* Hide overflow if text is too long */
+            text-overflow: ellipsis; /* Add ellipsis for overflowed text */
         }
         .team-member a {
             display: inline-block;
@@ -80,47 +82,72 @@
 
         async function fetchTeamMembers() {
             const teamContainer = document.getElementById('team-members-container');
+            if (!teamContainer) {
+                console.error("Error: Element with ID 'team-members-container' not found.");
+                return; // Stop execution if container is not found
+            }
             teamContainer.innerHTML = '<p>Loading team members...</p>'; // Initial loading message
 
             try {
+                console.log('Attempting to fetch data from:', GOOGLE_SHEET_CSV_URL);
                 const response = await fetch(GOOGLE_SHEET_CSV_URL);
+
                 if (!response.ok) {
-                    throw new Error(`Network response was not ok, status: ${response.status}`);
+                    const errorText = await response.text();
+                    console.error('Fetch failed:', response.status, response.statusText, errorText);
+                    throw new Error(`Network response was not ok. Status: ${response.status} ${response.statusText}`);
                 }
+
                 const csvText = await response.text();
+                console.log('CSV data fetched successfully (first 200 chars):', csvText.substring(0, 200) + '...'); 
 
                 // Parse CSV data
-                // This simple parser assumes no commas within data fields
-                const rows = csvText.split('\n').map(row => row.split(',').map(cell => cell.trim().replace(/"/g, ''))); // Remove quotes if present
+                // This simple parser assumes no commas within data fields that are not quoted.
+                // It also removes surrounding quotes from cells.
+                const rows = csvText.split('\n').map(row => row.split(',').map(cell => cell.trim().replace(/^"|"$/g, '')));
+                console.log('Parsed rows:', rows);
 
                 if (rows.length < 2) { // Need at least header row + one data row
-                    teamContainer.innerHTML = '<p>No team member data found in the Google Sheet, or the sheet is empty.</p>';
+                    teamContainer.innerHTML = '<p>No team member data found in the Google Sheet, or the sheet is empty (only headers).</p>';
+                    console.warn('Google Sheet has no data rows or is malformed:', rows);
                     return;
                 }
 
-                const headers = rows[0].map(header => header.toLowerCase().replace(/\s/g, '')); // Normalize headers (e.g., "Website Link" -> "websitelink")
+                // Normalize headers (e.g., "Image Url" becomes "imageurl") for consistent lookup
+                const headers = rows[0].map(header => header.toLowerCase().replace(/\s/g, '')); 
+                console.log('Normalized Headers from sheet:', headers);
+
                 const teamMembersData = rows.slice(1);
+                console.log('Team Members Data (excluding headers):', teamMembersData);
 
                 // Clear the loading message
                 teamContainer.innerHTML = '';
 
-                teamMembersData.forEach(row => {
-                    // Find column indices dynamically
+                let membersRendered = 0;
+
+                teamMembersData.forEach((row, rowIndex) => {
+                    // Skip empty rows that might appear due to extra newlines in CSV
+                    if (row.length === 0 || row.every(cell => cell === '')) {
+                        console.log(`Skipping empty row at index ${rowIndex + 1}`);
+                        return;
+                    }
+
+                    // Find column indices dynamically using normalized headers
                     const nameIndex = headers.indexOf('name');
-                    const descriptionIndex = headers.indexOf('description');
-                    const websiteLinkIndex = headers.indexOf('websitelink');
-                    const imageUrlIndex = headers.indexOf('imageurl'); // Assuming you might add an "Image URL" column
+                    const roleIndex = headers.indexOf('role'); // Changed from 'description'
+                    const imageUrlIndex = headers.indexOf('imageurl'); // New header
+                    const linkedInIndex = headers.indexOf('linkedin'); // Changed from 'websitelink'
 
                     // Ensure essential columns exist for this row
-                    if (nameIndex === -1 || descriptionIndex === -1) {
-                        console.warn('Skipping a row: Missing "Name" or "Description" column in Google Sheet data.', row);
+                    if (nameIndex === -1 || roleIndex === -1) {
+                        console.warn(`Skipping row ${rowIndex + 1}: Missing "Name" or "Role" column in Google Sheet data. Row:`, row);
                         return;
                     }
 
                     const name = row[nameIndex] || 'Unknown Member';
-                    const description = row[descriptionIndex] || 'No description provided.';
-                    const website = (websiteLinkIndex !== -1 && row[websiteLinkIndex]) ? row[websiteLinkIndex] : '';
+                    const role = row[roleIndex] || 'No role provided.'; // Changed from description
                     const imageUrl = (imageUrlIndex !== -1 && row[imageUrlIndex]) ? row[imageUrlIndex] : 'https://via.placeholder.com/120?text=No+Image'; // Default placeholder
+                    const linkedIn = (linkedInIndex !== -1 && row[linkedInIndex]) ? row[linkedInIndex] : '';
 
                     // Create the HTML elements for each team member
                     const memberDiv = document.createElement('div');
@@ -135,24 +162,27 @@
                     memberName.textContent = name;
                     memberDiv.appendChild(memberName);
 
-                    const memberDescription = document.createElement('p');
-                    memberDescription.textContent = description;
-                    memberDiv.appendChild(memberDescription);
+                    const memberRole = document.createElement('p'); // Changed from memberDescription
+                    memberRole.textContent = role; // Changed from description
+                    memberDiv.appendChild(memberRole);
 
-                    if (website && (website.startsWith('http://') || website.startsWith('https://'))) {
-                        const memberWebsite = document.createElement('a');
-                        memberWebsite.href = website;
-                        memberWebsite.textContent = 'Visit Website';
-                        memberWebsite.target = '_blank'; // Open in new tab
-                        memberWebsite.rel = 'noopener noreferrer'; // Security best practice for target="_blank"
-                        memberDiv.appendChild(memberWebsite);
+                    if (linkedIn && (linkedIn.startsWith('http://') || linkedIn.startsWith('https://'))) {
+                        const memberLinkedIn = document.createElement('a'); // Changed from memberWebsite
+                        memberLinkedIn.href = linkedIn;
+                        memberLinkedIn.textContent = 'LinkedIn Profile'; // Changed text
+                        memberLinkedIn.target = '_blank'; // Open in new tab
+                        memberLinkedIn.rel = 'noopener noreferrer'; // Security best practice for target="_blank"
+                        memberDiv.appendChild(memberLinkedIn);
                     }
 
                     teamContainer.appendChild(memberDiv);
+                    membersRendered++;
                 });
 
-                if (teamMembersData.length === 0) {
-                    teamContainer.innerHTML = '<p>No team members found after processing data.</p>';
+                if (membersRendered === 0) {
+                    teamContainer.innerHTML = '<p>No team members found after processing valid data rows. Check your sheet content.</p>';
+                } else {
+                    console.log(`Successfully rendered ${membersRendered} team members.`);
                 }
 
             } catch (error) {
