@@ -1,134 +1,605 @@
-<section id="our-team">
-    <div class="container mx-auto px-4">
-        <h2 class="text-4xl font-extrabold section-heading">Our Team</h2>
-        <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-12">
-            Our dedicated team is at the heart of everything we do, bringing expertise and passion to every project. We're proud to highlight our talented developers who are instrumental in bringing your vision to life.
-        </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gupta Consultancy Services (GCS) - Your Trusted Partner in Digital Transformation</title>
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/GCS-Consultancy/gcs-website/e7d763e0e7c6e8bafcf393db64b9b9924bf28b46/gcs-gupta-logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Base styles for the body using Inter font and a light background */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light Gray from Tailwind's default color palette */
+            scroll-behavior: smooth; /* Enables smooth scrolling when clicking navigation links */
+        }
+        /* Styling for the hero section with a vibrant gradient background */
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Purple to Blue gradient */
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+        }
 
-        <div class="team-members-carousel-container">
-            <div class="team-members-track flex transition-transform duration-500 ease-in-out" id="teamMembersTrack">
-                <p class="p-8">Loading team members...</p>
+        /* Specific styles for the navigation bar */
+        .navbar {
+            background-color: #ffffff; /* White background for the navbar */
+            border-bottom: 1px solid #e2e8f0; /* Light border at the bottom */
+        }
+
+        /* Call to Action button styling */
+        .btn-primary {
+            background-color: #4f46e5; /* Indigo-600 */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #4338ca; /* Indigo-700 */
+        }
+
+        /* Service card styling */
+        .service-card {
+            background-color: #ffffff;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Icon styling within service cards */
+        .service-icon {
+            color: #4f46e5; /* Indigo-600 */
+        }
+
+        /* Testimonial card styling */
+        .testimonial-card {
+            background-color: #ffffff;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Blog post card styling */
+        .blog-card {
+            background-color: #ffffff;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #1a202c; /* Dark gray for footer */
+            color: white;
+        }
+
+        /* Utility for screen reader only content */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        /* Team Carousel Specific Styles */
+        .team-carousel-container {
+            position: relative;
+            overflow: hidden; /* Important to hide items outside the view */
+        }
+
+        .team-carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            scroll-snap-type: x mandatory; /* Enable scroll snapping */
+            -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS */
+            overflow-x: auto; /* Allow horizontal scrolling */
+            scrollbar-width: none; /* Hide scrollbar for Firefox */
+            -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
+        }
+
+        .team-carousel::-webkit-scrollbar {
+            display: none; /* Hide scrollbar for Webkit browsers */
+        }
+
+        .team-member-card {
+            flex-shrink: 0; /* Prevent cards from shrinking */
+            width: 100%; /* Default for mobile: one member per view */
+            scroll-snap-align: start; /* Snap to the start of each card */
+        }
+
+        @media (min-width: 640px) { /* Small screens (sm) */
+            .team-member-card {
+                width: calc(100% / 2); /* Show 2 members per row */
+            }
+        }
+
+        @media (min-width: 768px) { /* Medium screens (md) */
+            .team-member-card {
+                width: calc(100% / 3); /* Show 3 members per row */
+            }
+        }
+
+        @media (min-width: 1024px) { /* Large screens (lg) */
+            .team-member-card {
+                width: calc(100% / 4); /* Show 4 members per row */
+            }
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .carousel-button-prev {
+            left: 10px;
+        }
+
+        .carousel-button-next {
+            right: 10px;
+        }
+
+    </style>
+</head>
+<body class="text-gray-900">
+
+    <nav class="navbar p-4 shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800 flex items-center">
+                <img src="https://raw.githubusercontent.com/GCS-Consultancy/gcs-website/e7d763e0e7c6e8bafcf393db64b9b9924bf28b46/gcs-gupta-logo.png" alt="GCS Logo" class="h-8 w-8 mr-2">
+                GCS
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Home</a>
+                <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">About Us</a>
+                <a href="#services" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Services</a>
+                <a href="#team" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Our Team</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Contact</a>
             </div>
-            <button class="carousel-button prev" id="prevTeamBtn">&#10094;</button>
-            <button class="carousel-button next" id="nextTeamBtn">&#10095;</button>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
         </div>
-        <div class="carousel-dots" id="teamCarouselDots"></div>
+    </nav>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-4 fixed w-full z-40">
+        <a href="#home" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Home</a>
+        <a href="#about" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">About Us</a>
+        <a href="#services" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Services</a>
+        <a href="#team" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Our Team</a>
+        <a href="#contact" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Contact</a>
     </div>
-</section>
 
-<script>
-const GOOGLE_SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR-9ZE-RHcbVh69G9Hrk8cM_gy6hDbYwHFM_fCFiMgR5-HyHEHq46yGsROD-0nmpOi-gc_6XWpJIMPx/pub?gid=0&single=true&output=csv';
+    <section id="home" class="hero-section">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4 animate-fade-in-down">
+                Your Trusted Partner in Digital Transformation
+            </h1>
+            <p class="text-lg md:text-xl mb-8 animate-fade-in-up">
+                Empowering businesses with innovative IT and digital solutions to thrive in the modern era.
+            </p>
+            <a href="#contact" class="btn-primary inline-block animate-scale-in">Get a Free Consultation</a>
+        </div>
+    </section>
 
-function parseCSV(text) {
-    return text.trim().split('\n').map(row => row.split(',').map(cell => cell.trim()));
-}
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10">About Us</h2>
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 md:pr-8 mb-8 md:mb-0">
+                    <img src="https://via.placeholder.com/600x400" alt="About Us" class="rounded-lg shadow-lg">
+                </div>
+                <div class="md:w-1/2">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        Gupta Consultancy Services (GCS) is a leading IT and digital solutions provider committed to
+                        helping businesses navigate the complexities of the digital landscape. With a focus on innovation,
+                        efficiency, and client satisfaction, we deliver tailored strategies and cutting-edge technologies
+                        to drive growth and achieve sustainable success.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Our team of experienced professionals brings a wealth of expertise in various domains,
+                        ensuring that we provide comprehensive and impactful solutions that align with your business objectives.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-const teamMembersTrack = document.getElementById('teamMembersTrack');
-const prevTeamBtn = document.getElementById('prevTeamBtn');
-const nextTeamBtn = document.getElementById('nextTeamBtn');
-const teamCarouselDotsContainer = document.getElementById('teamCarouselDots');
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card p-6 text-center">
+                    <div class="service-icon text-5xl mb-4">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Web Development</h3>
+                    <p class="text-gray-600">
+                        Crafting responsive, high-performance websites and web applications tailored to your business needs.
+                    </p>
+                </div>
+                <div class="service-card p-6 text-center">
+                    <div class="service-icon text-5xl mb-4">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Mobile App Development</h3>
+                    <p class="text-gray-600">
+                        Building intuitive and engaging mobile applications for iOS and Android platforms.
+                    </p>
+                </div>
+                <div class="service-card p-6 text-center">
+                    <div class="service-icon text-5xl mb-4">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Cloud Solutions</h3>
+                    <p class="text-gray-600">
+                        Implementing scalable and secure cloud infrastructure and migration strategies.
+                    </p>
+                </div>
+                <div class="service-card p-6 text-center">
+                    <div class="service-icon text-5xl mb-4">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Digital Marketing</h3>
+                    <p class="text-gray-600">
+                        Boosting your online presence with SEO, SEM, social media marketing, and content strategies.
+                    </p>
+                </div>
+                <div class="service-card p-6 text-center">
+                    <div class="service-icon text-5xl mb-4">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Cybersecurity</h3>
+                    <p class="text-gray-600">
+                        Protecting your digital assets with robust security measures and threat intelligence.
+                    </p>
+                </div>
+                <div class="service-card p-6 text-center">
+                    <div class="service-icon text-5xl mb-4">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">AI & Machine Learning</h3>
+                    <p class="text-gray-600">
+                        Leveraging artificial intelligence and machine learning for data analysis and automation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-let teamMembers = [];
-let currentTeamPageIndex = 0;
-let membersPerPage = 4;
+    <section id="team" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10">Meet Our Team</h2>
+            <div class="team-carousel-container relative">
+                <div id="teamCarousel" class="team-carousel">
+                    <p class="p-8 text-center w-full">Loading team members...</p>
+                </div>
+                <button id="prevTeamBtn" class="carousel-button carousel-button-prev hidden">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button id="nextTeamBtn" class="carousel-button carousel-button-next hidden">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div id="teamCarouselDotsContainer" class="flex justify-center mt-6 space-x-2">
+                </div>
+        </div>
+    </section>
 
-function renderTeamCarouselPages() {
-    membersPerPage = window.innerWidth <= 768 ? 1 : window.innerWidth <= 1024 ? 2 : 4;
-    const pages = [];
-    for (let i = 0; i < teamMembers.length; i += membersPerPage) {
-        const membersGroup = teamMembers.slice(i, i + membersPerPage);
-        const pageDiv = document.createElement('div');
-        pageDiv.className = "flex justify-center w-full shrink-0";
-        membersGroup.forEach(member => {
-            const memberDiv = document.createElement('div');
-            memberDiv.className = "team-member-card w-full md:w-1/2 lg:w-1/4 p-4 box-border";
-            memberDiv.innerHTML = `
-                <img src="${member.imageUrl}" alt="${member.name}" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-indigo-500">
-                <h3 class="text-xl font-bold">${member.name}</h3>
-                <p class="text-sm font-semibold text-gray-600">${member.role}</p>
-                <p class="text-xs text-gray-500 mt-1">${member.experience || ''}</p>
-                <p class="text-gray-700 text-sm mt-2">${member.about}</p>
-                ${member.linkedIn ? `<a href="${member.linkedIn}" target="_blank" class="text-indigo-600 text-sm underline block mt-2">LinkedIn</a>` : ''}
-            `;
-            pageDiv.appendChild(memberDiv);
+    <section id="testimonials" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10">What Our Clients Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="testimonial-card p-6">
+                    <p class="text-gray-700 italic mb-4">
+                        "GCS transformed our online presence. Their web development team delivered a stunning website
+                        that exceeded our expectations. Highly recommend their services!"
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://via.placeholder.com/50" alt="Client 1" class="rounded-full mr-4">
+                        <div>
+                            <p class="font-semibold text-gray-800">Jane Doe</p>
+                            <p class="text-gray-500 text-sm">CEO, Tech Innovators</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card p-6">
+                    <p class="text-gray-700 italic mb-4">
+                        "The mobile app developed by GCS has revolutionized our customer engagement.
+                        Their expertise in mobile solutions is truly impressive."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://via.placeholder.com/50" alt="Client 2" class="rounded-full mr-4">
+                        <div>
+                            <p class="font-semibold text-gray-800">John Smith</p>
+                            <p class="text-gray-500 text-sm">Founder, Global Reach</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card p-6">
+                    <p class="text-gray-700 italic mb-4">
+                        "We partnered with GCS for cybersecurity, and they've provided us with peace of mind.
+                        Their proactive approach is exactly what we needed."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://via.placeholder.com/50" alt="Client 3" class="rounded-full mr-4">
+                        <div>
+                            <p class="font-semibold text-gray-800">Emily White</p>
+                            <p class="text-gray-500 text-sm">CTO, Secure Corp</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10">Contact Us</h2>
+            <div class="max-w-3xl mx-auto bg-gray-50 p-8 rounded-lg shadow-lg">
+                <p class="text-center text-gray-700 mb-6">
+                    Have a project in mind or just want to say hello? Fill out the form below or reach out to us directly.
+                </p>
+                <form>
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
+                        <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Name">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
+                        <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="your@example.com">
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message</label>
+                        <textarea id="message" name="message" rows="5" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your message"></textarea>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex flex-col md:flex-row justify-center items-center mb-6">
+                <a href="#" class="text-white text-2xl font-bold flex items-center mb-4 md:mb-0 md:mr-6">
+                    <img src="https://raw.githubusercontent.com/GCS-Consultancy/gcs-website/e7d763e0e7c6e8bafcf393db64b9b9924bf28b46/gcs-gupta-logo.png" alt="GCS Logo" class="h-8 w-8 mr-2">
+                    GCS
+                </a>
+                <div class="flex space-x-4 mb-4 md:mb-0">
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Privacy Policy</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Terms of Service</a>
+                </div>
+            </div>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="https://twitter.com" target="_blank" aria-label="Twitter" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">
+                    <i class="fab fa-twitter text-2xl"></i>
+                </a>
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="text-gray-300 hover:text-blue-600 transition-colors duration-300">
+                    <i class="fab fa-facebook-f text-2xl"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" class="text-gray-300 hover:text-blue-700 transition-colors duration-300">
+                    <i class="fab fa-linkedin-in text-2xl"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="text-gray-300 hover:text-pink-500 transition-colors duration-300">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </a>
+            </div>
+            <p class="text-gray-400 text-sm">&copy; 2025 Gupta Consultancy Services. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+            }
         });
-        pages.push(pageDiv);
-    }
-    teamMembersTrack.innerHTML = "";
-    pages.forEach(page => teamMembersTrack.appendChild(page));
-    teamMembersTrack.style.width = `${pages.length * 100}%`;
-    Array.from(teamMembersTrack.children).forEach(child => child.style.width = `${100 / pages.length}%`);
-    createTeamDots(pages.length);
-    updateTeamCarousel();
-}
 
-function updateTeamCarousel() {
-    const offset = -(currentTeamPageIndex * 100);
-    teamMembersTrack.style.transform = `translateX(${offset}%)`;
-    Array.from(teamCarouselDotsContainer.children).forEach((dot, index) => {
-        dot.classList.toggle('active', index === currentTeamPageIndex);
-    });
-}
-
-function createTeamDots(totalPages) {
-    teamCarouselDotsContainer.innerHTML = "";
-    for (let i = 0; i < totalPages; i++) {
-        const dot = document.createElement('span');
-        dot.className = "dot";
-        if (i === currentTeamPageIndex) dot.classList.add('active');
-        dot.addEventListener('click', () => {
-            currentTeamPageIndex = i;
-            updateTeamCarousel();
-        });
-        teamCarouselDotsContainer.appendChild(dot);
-    }
-}
-
-function showNextTeamPage() {
-    const totalPages = teamCarouselDotsContainer.children.length;
-    currentTeamPageIndex = (currentTeamPageIndex + 1) % totalPages;
-    updateTeamCarousel();
-}
-
-function showPrevTeamPage() {
-    const totalPages = teamCarouselDotsContainer.children.length;
-    currentTeamPageIndex = (currentTeamPageIndex - 1 + totalPages) % totalPages;
-    updateTeamCarousel();
-}
-
-prevTeamBtn.addEventListener('click', showPrevTeamPage);
-nextTeamBtn.addEventListener('click', showNextTeamPage);
-window.addEventListener('resize', () => {
-    currentTeamPageIndex = 0;
-    renderTeamCarouselPages();
-});
-
-async function fetchTeamMembers() {
-    teamMembersTrack.innerHTML = '<p class="p-8">Loading team members...</p>';
-    try {
-        const response = await fetch(GOOGLE_SHEET_CSV_URL);
-        const csvText = await response.text();
-        const rows = parseCSV(csvText);
-        const headers = rows[0].map(h => h.toLowerCase());
-        teamMembers = rows.slice(1).map(row => {
-            const data = {};
-            headers.forEach((key, idx) => {
-                data[key] = row[idx] || '';
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(item => {
+            item.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
             });
-            return {
-                name: data['name'],
-                role: data['role'],
-                experience: data['experience'],
-                about: data['about'],
-                imageUrl: data['imageurl'] || 'https://via.placeholder.com/120?text=No+Image',
-                linkedIn: data['linkedin']
-            };
         });
-        renderTeamCarouselPages();
-    } catch (error) {
-        teamMembersTrack.innerHTML = '<p class="p-8">Failed to load team data.</p>';
-    }
-}
 
-document.addEventListener('DOMContentLoaded', fetchTeamMembers);
-</script>
+        // Team Carousel Logic
+        let teamMembers = [];
+        let currentIndex = 0;
+        let itemsPerPage = 1; // Default for mobile
+        let totalSlides = 0; // Will be calculated
+
+        function getItemsPerPage() {
+            const width = window.innerWidth;
+            if (width >= 1024) { // lg breakpoint
+                return 4;
+            } else if (width >= 768) { // md breakpoint
+                return 3;
+            } else if (width >= 640) { // sm breakpoint
+                return 2;
+            } else {
+                return 1; // mobile
+            }
+        }
+
+        function updateCarousel() {
+            const teamCarousel = document.getElementById('teamCarousel');
+            if (!teamCarousel) return;
+
+            itemsPerPage = getItemsPerPage();
+            totalSlides = Math.ceil(teamMembers.length / itemsPerPage);
+
+            // Ensure currentIndex is valid
+            if (currentIndex >= totalSlides) {
+                currentIndex = totalSlides > 0 ? totalSlides - 1 : 0;
+            }
+
+            const offset = currentIndex * (teamCarousel.offsetWidth / itemsPerPage);
+            teamCarousel.style.transform = `translateX(-${offset}px)`;
+
+            updateButtons();
+            updateDots();
+        }
+
+        function updateButtons() {
+            const prevTeamBtn = document.getElementById('prevTeamBtn');
+            const nextTeamBtn = document.getElementById('nextTeamBtn');
+
+            if (totalSlides <= 1) { // Hide buttons if only one slide
+                prevTeamBtn.style.display = 'none';
+                nextTeamBtn.style.display = 'none';
+            } else {
+                prevTeamBtn.style.display = currentIndex === 0 ? 'none' : 'block';
+                nextTeamBtn.style.display = currentIndex === totalSlides - 1 ? 'none' : 'block';
+            }
+        }
+
+        function updateDots() {
+            const teamCarouselDotsContainer = document.getElementById('teamCarouselDotsContainer');
+            if (!teamCarouselDotsContainer) return;
+
+            teamCarouselDotsContainer.innerHTML = ''; // Clear existing dots
+
+            if (totalSlides <= 1) { // Hide dots if only one slide
+                teamCarouselDotsContainer.style.display = 'none';
+                return;
+            } else {
+                teamCarouselDotsContainer.style.display = 'flex'; // Show dots
+            }
+
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('span');
+                dot.classList.add('w-3', 'h-3', 'bg-gray-400', 'rounded-full', 'mx-1', 'cursor-pointer');
+                if (i === currentIndex) {
+                    dot.classList.add('bg-blue-600'); // Active dot color
+                }
+                dot.addEventListener('click', () => {
+                    currentIndex = i;
+                    updateCarousel();
+                });
+                teamCarouselDotsContainer.appendChild(dot);
+            }
+        }
+
+        function nextSlide() {
+            if (currentIndex < totalSlides - 1) {
+                currentIndex++;
+                updateCarousel();
+            }
+        }
+
+        function prevSlide() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+            }
+        }
+
+        // Event listeners for buttons
+        document.getElementById('prevTeamBtn').addEventListener('click', prevSlide);
+        document.getElementById('nextTeamBtn').addEventListener('click', nextSlide);
+
+        // Fetch and display data
+        async function fetchTeamMembers() {
+            const teamContainer = document.getElementById('teamCarousel');
+            const teamCarouselDotsContainer = document.getElementById('teamCarouselDotsContainer');
+            const prevTeamBtn = document.getElementById('prevTeamBtn');
+            const nextTeamBtn = document.getElementById('nextTeamBtn');
+
+            if (!teamContainer || !teamCarouselDotsContainer || !prevTeamBtn || !nextTeamBtn) {
+                console.error("One or more essential carousel elements not found.");
+                return;
+            }
+
+            try {
+                const response = await fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vTpr4M15fE1a98tLqU3x2k5Xg3W8n98hL5n0W_b0Xy0K5Xg3W8n98hL5n0W_b0Xy0K/pub?gid=0&single=true&output=csv');
+                const csvData = await response.text();
+                const rows = csvData.split('\n').map(row => row.trim()).filter(row => row);
+                const headers = rows[0].split(',').map(header => header.trim());
+                const dataRows = rows.slice(1);
+
+                teamMembers = dataRows.map(row => {
+                    const values = row.split(',').map(value => value.trim());
+                    let member = {};
+                    headers.forEach((header, index) => {
+                        member[header.toLowerCase()] = values[index];
+                    });
+                    return member;
+                }).filter(member => member.name && member.role && member.description && member.image); // Ensure valid data
+
+                teamContainer.innerHTML = ''; // Clear previous content
+
+                let membersRendered = 0;
+                if (teamMembers.length > 0) {
+                    teamMembers.forEach(member => {
+                        const memberCard = document.createElement('div');
+                        memberCard.classList.add('team-member-card', 'flex-none', 'p-4', 'pb-10', 'text-center', 'border', 'border-gray-200', 'rounded-lg', 'shadow-md', 'bg-white', 'hover:shadow-lg', 'transition-shadow', 'duration-300', 'mb-4', 'mx-2');
+                        memberCard.innerHTML = `
+                            <img src="${member.image}" alt="${member.name}" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-500 shadow-md">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-1">${member.name}</h3>
+                            <p class="text-blue-600 font-medium mb-2">${member.role}</p>
+                            <p class="text-gray-600 text-sm">${member.description}</p>
+                        `;
+                        teamContainer.appendChild(memberCard);
+                        membersRendered++;
+                    });
+
+                    updateCarousel(); // Initial update after members are loaded
+
+                } else {
+                    teamContainer.innerHTML = '<p class="p-8">No team members found after processing valid data rows. Check your sheet content and headers carefully.</p>';
+                    // Also hide buttons/dots if no members loaded
+                    prevTeamBtn.style.display = 'none';
+                    nextTeamBtn.style.display = 'none';
+                    teamCarouselDotsContainer.style.display = 'none';
+                }
+
+                if (membersRendered > 0) {
+                    console.log(`Successfully rendered ${membersRendered} team members.`);
+                }
+
+            } catch (error) {
+                console.error('Failed to fetch or parse Google Sheets team data:', error);
+                teamContainer.innerHTML = '<p class="p-8">Error loading team members. Please ensure the Google Sheet is published correctly and you have an internet connection.</p>';
+            }
+        }
+
+        // Call the function to fetch and display data when the page finishes loading
+        document.addEventListener('DOMContentLoaded', fetchTeamMembers);
+        window.addEventListener('resize', updateCarousel); // Update on resize
+    </script>
+
+</body>
+</html>
