@@ -133,6 +133,7 @@
             border-radius: 0.75rem; /* Rounded corners */
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Subtle shadow */
             transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            /* REMOVED: max-width and margin auto for individual cards */
         }
 
         /* Adjust padding/margin for inner content if needed to prevent squishing */
@@ -169,7 +170,6 @@
             font-size: 1em;
             color: #64748b; /* Slightly lighter gray for description */
             margin-top: 1rem;
-            /* REMOVED: min-height, overflow: hidden, text-overflow: ellipsis */
             /* Text will now wrap naturally based on container width */
         }
 
@@ -357,7 +357,7 @@
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-3 text-gray-800">Data Analytics</h3>
-                    <p class="text-gray-600">Uncovering hidden patterns, trends, and valuable insights from your raw data to support strategic decision-making and business growth. </p>
+                    <p class="text-gray-600">Uncovering hidden patterns, trends, and valuable insights from your raw data to support strategic decision-making and business growth.</p>
                 </div>
 
                 <div class="service-card bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100">
@@ -570,7 +570,7 @@
         const reviewCards = Array.from(reviewCarouselTrack.children);
         const prevReviewBtn = document.getElementById('prevReviewBtn');
         const nextReviewBtn = document.getElementById('nextReviewBtn');
-        const reviewCarouselDotsContainer = document.getElementById('reviewCarouselDots');
+        const reviewCarouselDotsContainer = document.getElementById('reviewCarouselDots'); // Corrected ID here
 
         let currentReviewIndex = 0;
         let autoReviewSlideInterval;
@@ -736,20 +736,15 @@
 
         function createTeamDots() {
             teamCarouselDotsContainer.innerHTML = '';
-            // Create a dot for each *possible starting position* for the carousel, not necessarily each member
-            // Or, if dots are for each member as implied by the user's request "1,2,3,4 then 2,3,4,5 then 3,4,5,6", then create a dot for each member.
-            // Let's create a dot for each member.
             teamMembers.forEach((_, index) => {
                 const dot = document.createElement('span');
                 dot.classList.add('dot');
-                // A dot should only be active if its index is the currentTeamSlideIndex
                 if (index === currentTeamSlideIndex) {
                     dot.classList.add('active');
                 }
                 dot.addEventListener('click', () => {
-                    // When a dot is clicked, jump to that member's index if it's a valid starting position
                     const maxPossibleIndex = Math.max(0, teamMembers.length - membersPerView);
-                    currentTeamSlideIndex = Math.min(index, maxPossibleIndex); // Ensure we don't go past the end
+                    currentTeamSlideIndex = Math.min(index, maxPossibleIndex);
                     updateTeamCarousel();
                     resetAutoTeamSlide();
                 });
@@ -759,9 +754,6 @@
 
         function updateTeamDots() {
             Array.from(teamCarouselDotsContainer.children).forEach((dot, index) => {
-                // A dot is active if its index matches the currentTeamSlideIndex
-                // Or, if it falls within the current visible range (currentTeamSlideIndex to currentTeamSlideIndex + membersPerView - 1)
-                // For simplicity, let's keep it just the starting index dot
                 if (index === currentTeamSlideIndex) {
                     dot.classList.add('active');
                 } else {
@@ -781,7 +773,7 @@
 
         async function fetchTeamMembers() {
             const teamContainer = teamMembersTrack; // Now the track itself is the container for members
-            teamContainer.innerHTML = '<p class="p-8">Loading team members...</p>'; 
+            teamContainer.innerHTML = '<p class="p-8">Loading team members...</p>';
 
             try {
                 console.log('Attempting to fetch team data from:', GOOGLE_SHEET_CSV_URL);
@@ -794,25 +786,25 @@
                 }
 
                 const csvText = await response.text();
-                console.log('CSV team data fetched successfully (first 200 chars):', csvText.substring(0, Math.min(csvText.length, 200)) + '...'); 
+                console.log('CSV team data fetched successfully (first 200 chars):', csvText.substring(0, Math.min(csvText.length, 200)) + '...');
 
                 const rows = parseCSV(csvText);
                 console.log('Parsed team rows (using robust parser):', rows);
 
-                if (rows.length < 2) { 
+                if (rows.length < 2) {
                     teamContainer.innerHTML = '<p class="p-8">No team member data found in the Google Sheet, or the sheet is empty (only headers).</p>';
                     console.warn('Google Sheet has no data rows or is malformed for team data:', rows);
                     return;
                 }
 
-                const headers = rows[0].map(header => header.toLowerCase().replace(/\s/g, '')); 
+                const headers = rows[0].map(header => header.toLowerCase().replace(/\s/g, ''));
                 console.log('Normalized Headers from team sheet:', headers);
 
                 teamMembers = []; // Reset teamMembers array
                 rows.slice(1).forEach((row, rowIndex) => { // Skip header row
                     // Find column indices dynamically using normalized headers
                     const nameIndex = headers.indexOf('name');
-                    const roleIndex = headers.indexOf('role'); 
+                    const roleIndex = headers.indexOf('role');
                     const experienceIndex = headers.indexOf('experience');
                     const aboutIndex = headers.indexOf('about');
                     const imageUrlIndex = headers.indexOf('imageurl');
