@@ -169,10 +169,11 @@
             font-size: 1em;
             color: #64748b; /* Slightly lighter gray for description */
             margin-top: 1rem;
-            /* Removed min-height to allow content to expand naturally */
-            overflow: visible; /* Allows content to flow outside if needed, though wrapping should prevent it */
-            white-space: normal; /* Ensures text wraps */
-            text-overflow: clip; /* Prevents ellipsis, shows full text (or clips if overflow: hidden is used elsewhere) */
+            /* Explicitly remove min-height and ensure text wrapping */
+            min-height: auto; /* Allow height to adjust dynamically */
+            overflow: visible; /* Ensure content is not hidden */
+            white-space: normal; /* Crucial: Ensures text wraps into paragraphs */
+            text-overflow: clip; /* Prevent ellipsis, show full text */
         }
 
         .team-member-card img {
