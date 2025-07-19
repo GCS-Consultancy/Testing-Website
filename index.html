@@ -122,7 +122,7 @@
         }
 
         .team-member-card {
-            min-width: calc(100% / 4); /* Each card takes 1/4 of the track width */
+            min-width: calc(100% / 4); /* Each card takes 1/4 of the track width for desktop */
             box-sizing: border-box; /* Include padding/border in width */
             padding: 2.5rem; /* Ample padding inside card */
             margin: 0; /* Remove individual margins as flexbox handles spacing */
@@ -185,12 +185,12 @@
         }
 
         /* Responsive adjustments for team cards */
-        @media (max-width: 1024px) { /* On medium screens and smaller, show 2 per row */
+        @media (max-width: 1024px) { /* On medium screens (tablets), show 2 per row */
             .team-member-card {
                 min-width: calc(100% / 2);
             }
         }
-        @media (max-width: 768px) { /* On small screens and smaller, show 1 per row */
+        @media (max-width: 768px) { /* On small screens (mobile), show 1 per row */
             .team-member-card {
                 min-width: 100%;
             }
@@ -703,49 +703,66 @@
         const teamCarouselDotsContainer = document.getElementById('teamCarouselDots');
 
         let teamMembers = []; // Store the fetched team members data
-        const membersPerSlide = 4; // Number of members to show per slide
-        let currentTeamSlideIndex = 0;
+        const membersPerView = 4; // Number of members visible at one time
+        let currentTeamSlideIndex = 0; // This is now the index of the first visible member
         let autoTeamSlideInterval;
         const teamSlideIntervalTime = 5000; // 5 seconds
 
         function updateTeamCarousel() {
-            const totalSlides = Math.ceil(teamMembers.length / membersPerSlide);
-            const offset = -currentTeamSlideIndex * 100;
+            // Calculate the offset based on the current index and the number of members per view
+            const offset = -currentTeamSlideIndex * (100 / membersPerView);
             teamMembersTrack.style.transform = `translateX(${offset}%)`;
-            updateTeamDots(totalSlides);
+            updateTeamDots();
         }
 
         function showNextTeamSlide() {
-            const totalSlides = Math.ceil(teamMembers.length / membersPerSlide);
-            currentTeamSlideIndex = (currentTeamSlideIndex + 1) % totalSlides;
+            const maxIndex = teamMembers.length - membersPerView; // Max index for the first visible member
+            if (currentTeamSlideIndex < maxIndex) {
+                currentTeamSlideIndex++;
+            } else {
+                currentTeamSlideIndex = 0; // Loop back to the start
+            }
             updateTeamCarousel();
         }
 
         function showPrevTeamSlide() {
-            const totalSlides = Math.ceil(teamMembers.length / membersPerSlide);
-            currentTeamSlideIndex = (currentTeamSlideIndex - 1 + totalSlides) % totalSlides;
+            const maxIndex = teamMembers.length - membersPerView; // Max index for the first visible member
+            if (currentTeamSlideIndex > 0) {
+                currentTeamSlideIndex--;
+            } else {
+                currentTeamSlideIndex = maxIndex > 0 ? maxIndex : 0; // Loop to the end, or stay at 0 if only one slide
+            }
             updateTeamCarousel();
         }
 
-        function createTeamDots(totalSlides) {
+        function createTeamDots() {
             teamCarouselDotsContainer.innerHTML = '';
-            for (let i = 0; i < totalSlides; i++) {
+            // Create a dot for each *possible starting position* for the carousel, not necessarily each member
+            // Or, if dots are for each member as implied by the user's request "1,2,3,4 then 2,3,4,5 then 3,4,5,6", then create a dot for each member.
+            // Let's create a dot for each member.
+            teamMembers.forEach((_, index) => {
                 const dot = document.createElement('span');
                 dot.classList.add('dot');
-                if (i === currentTeamSlideIndex) {
+                // A dot should only be active if its index is the currentTeamSlideIndex
+                if (index === currentTeamSlideIndex) {
                     dot.classList.add('active');
                 }
                 dot.addEventListener('click', () => {
-                    currentTeamSlideIndex = i;
+                    // When a dot is clicked, jump to that member's index if it's a valid starting position
+                    const maxPossibleIndex = Math.max(0, teamMembers.length - membersPerView);
+                    currentTeamSlideIndex = Math.min(index, maxPossibleIndex); // Ensure we don't go past the end
                     updateTeamCarousel();
                     resetAutoTeamSlide();
                 });
                 teamCarouselDotsContainer.appendChild(dot);
-            }
+            });
         }
 
-        function updateTeamDots(totalSlides) {
+        function updateTeamDots() {
             Array.from(teamCarouselDotsContainer.children).forEach((dot, index) => {
+                // A dot is active if its index matches the currentTeamSlideIndex
+                // Or, if it falls within the current visible range (currentTeamSlideIndex to currentTeamSlideIndex + membersPerView - 1)
+                // For simplicity, let's keep it just the starting index dot
                 if (index === currentTeamSlideIndex) {
                     dot.classList.add('active');
                 } else {
@@ -864,15 +881,15 @@
                     });
 
                     // Initialize team carousel after members are loaded
-                    const totalTeamSlides = Math.ceil(teamMembers.length / membersPerSlide);
-                    if (totalTeamSlides > 1) { // Only enable carousel if more than one slide
+                    // We only need navigation if there are more members than can fit in one view
+                    if (teamMembers.length > membersPerView) {
                         prevTeamBtn.addEventListener('click', () => { showPrevTeamSlide(); resetAutoTeamSlide(); });
                         nextTeamBtn.addEventListener('click', () => { showNextTeamSlide(); resetAutoTeamSlide(); });
-                        createTeamDots(totalTeamSlides);
+                        createTeamDots(); // Dots will now represent each member for simpler navigation
                         updateTeamCarousel();
                         startAutoTeamSlide();
                     } else {
-                        // Hide buttons and dots if only one slide
+                        // Hide buttons and dots if all members fit in one view
                         prevTeamBtn.style.display = 'none';
                         nextTeamBtn.style.display = 'none';
                         teamCarouselDotsContainer.style.display = 'none';
