@@ -169,9 +169,8 @@
             font-size: 1em;
             color: #64748b; /* Slightly lighter gray for description */
             margin-top: 1rem;
-            min-height: 80px; /* Ensure consistent height for descriptions */
-            overflow: hidden;
-            text-overflow: ellipsis;
+            /* REMOVED: min-height, overflow: hidden, text-overflow: ellipsis */
+            /* Text will now wrap naturally based on container width */
         }
 
         .team-member-card img {
@@ -864,8 +863,8 @@
 
                         const memberAbout = document.createElement('p');
                         memberAbout.classList.add('description');
-                        // IMPORTANT CHANGE HERE: Use innerHTML and replace newlines with <br>
-                        memberAbout.innerHTML = member.about.replace(/\n/g, '<br>'); 
+                        // Use textContent directly, as we now want the browser to wrap
+                        memberAbout.textContent = member.about;
                         memberDiv.appendChild(memberAbout);
 
                         if (member.linkedIn && (member.linkedIn.startsWith('http://') || member.linkedIn.startsWith('https://'))) {
