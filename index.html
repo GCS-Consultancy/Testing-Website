@@ -11,288 +11,290 @@
     <style>
         /* Base styles for the body using Inter font and a light background */
         body {
-            font-family: 'Inter', sans-serif; [cite_start]/* [cite: 1, 2] */
-            background-color: #f8fafc; [cite_start]/* Light Gray from Tailwind's default color palette */ /* [cite: 2] */
-            scroll-behavior: smooth; [cite_start]/* Enables smooth scrolling when clicking navigation links */ /* [cite: 2, 3] */
+            font-family: 'Inter', sans-serif; /* */
+            background-color: #f8fafc; /* Light Gray from Tailwind's default color palette */ /* */
+            scroll-behavior: smooth; /* Enables smooth scrolling when clicking navigation links */ /* */
         }
         /* Styling for the hero section with a vibrant gradient background */
         .hero-section {
-            background: linear-gradient(135deg, #4c51bf, #667eea); [cite_start]/* A blend of darker and lighter purple */ /* [cite: 3, 4] */
-            color: white; [cite_start]/* White text for contrast */ /* [cite: 4, 5] */
-            padding: 8rem 0; [cite_start]/* Ample vertical padding */ /* [cite: 4, 6] */
+            background: linear-gradient(135deg, #4c51bf, #667eea); /* A blend of darker and lighter purple */ /* */
+            color: white; /* White text for contrast */ /* */
+            padding: 8rem 0; /* Ample vertical padding */ /* */
         }
         /* Styling for main section headings */
         .section-heading {
-            color: #1a202c; [cite_start]/* Dark text for readability */ /* [cite: 7] */
+            color: #1a202c; /* Dark text for readability */ /* */
         }
         /* Service card styling with transitions for interactive effects */
         .service-card:hover {
-            transform: translateY(-5px); [cite_start]/* Moves the card up slightly */ /* [cite: 8] */
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); [cite_start]/* Adds a subtle shadow */ /* [cite: 9] */
+            transform: translateY(-5px); /* Moves the card up slightly */ /* */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Adds a subtle shadow */ /* */
         }
         /* Custom scrollbar for improved aesthetics across browsers */
         ::-webkit-scrollbar {
-            width: 8px; [cite_start]/* Width of the scrollbar */ /* [cite: 10] */
+            width: 8px; /* Width of the scrollbar */ /* */
         }
         ::-webkit-scrollbar-track {
-            background: #f1f5f9; [cite_start]/* Light track color */ /* [cite: 11] */
-            border-radius: 10px; [cite_start]/* Rounded corners for the track */ /* [cite: 12] */
+            background: #f1f5f9; /* Light track color */ /* */
+            border-radius: 10px; /* Rounded corners for the track */ /* */
         }
         ::-webkit-scrollbar-thumb {
-            background: #cbd5e1; [cite_start]/* Gray thumb color */ /* [cite: 13] */
-            border-radius: 10px; [cite_start]/* Rounded corners for the thumb */ /* [cite: 14] */
+            background: #cbd5e1; /* Gray thumb color */ /* */
+            border-radius: 10px; /* Rounded corners for the thumb */ /* */
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8; [cite_start]/* Darker gray on hover */ /* [cite: 15] */
+            background: #94a3b8; /* Darker gray on hover */ /* */
         }
         /* Styling for the new custom contact form */
         .contact-form-container {
-            max-width: 700px; [cite_start]/* Max width for the form itself */ /* [cite: 16] */
-            margin: 0 auto; [cite_start]/* Center the form */ /* [cite: 17] */
-            background-color: white; [cite_start]/* White background */ /* [cite: 18] */
-            padding: 2.5rem; [cite_start]/* Padding inside the form */ /* [cite: 19] */
-            border-radius: 0.5rem; [cite_start]/* Rounded corners */ /* [cite: 20] */
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); [cite_start]/* Subtle shadow */ /* [cite: 21] */
+            max-width: 700px; /* Max width for the form itself */ /* */
+            margin: 0 auto; /* Center the form */ /* */
+            background-color: white; /* White background */ /* */
+            padding: 2.5rem; /* Padding inside the form */ /* */
+            border-radius: 0.5rem; /* Rounded corners */ /* */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Subtle shadow */ /* */
         }
         .contact-form-container input[type="text"],
         .contact-form-container input[type="email"],
         .contact-form-container textarea {
-            width: 100%; [cite_start]/* Full width inputs */ /* [cite: 22] */
-            padding: 0.75rem; [cite_start]/* Padding inside inputs */ /* [cite: 23] */
-            border: 1px solid #e2e8f0; [cite_start]/* Light gray border */ /* [cite: 24] */
-            border-radius: 0.375rem; [cite_start]/* Slightly rounded corners for inputs */ /* [cite: 25] */
-            margin-bottom: 1rem; [cite_start]/* Space below inputs */ /* [cite: 26] */
-            background-color: #f8fafc; [cite_start]/* Light background for inputs */ /* [cite: 27] */
-            font-size: 1rem; [cite_start]/* Standard font size */ /* [cite: 28] */
-            color: #4a5568; [cite_start]/* Dark gray text */ /* [cite: 29] */
-            outline: none; [cite_start]/* Remove outline on focus */ /* [cite: 30] */
-            transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out; [cite_start]/* [cite: 31] */
+            width: 100%; /* Full width inputs */ /* */
+            padding: 0.75rem; /* Padding inside inputs */ /* */
+            border: 1px solid #e2e8f0; /* Light gray border */ /* */
+            border-radius: 0.375rem; /* Slightly rounded corners for inputs */ /* */
+            margin-bottom: 1rem; /* Space below inputs */ /* */
+            background-color: #f8fafc; /* Light background for inputs */ /* */
+            font-size: 1rem; /* Standard font size */ /* */
+            color: #4a5568; /* Dark gray text */ /* */
+            outline: none; /* Remove outline on focus */ /* */
+            transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* */
         }
         .contact-form-container input[type="text"]:focus,
         .contact-form-container input[type="email"]:focus,
         .contact-form-container textarea:focus {
-            border-color: #6366f1; [cite_start]/* Indigo border on focus */ /* [cite: 32] */
-            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2); [cite_start]/* Light indigo shadow on focus */ /* [cite: 33] */
+            border-color: #6366f1; /* Indigo border on focus */ /* */
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2); /* Light indigo shadow on focus */ /* */
         }
         .contact-form-container textarea {
-            min-height: 120px; [cite_start]/* Minimum height for textarea */ /* [cite: 34] */
-            resize: vertical; [cite_start]/* Allow vertical resizing */ /* [cite: 35] */
+            min-height: 120px; /* Minimum height for textarea */ /* */
+            resize: vertical; /* Allow vertical resizing */ /* */
         }
         .contact-form-container button {
-            display: inline-block; [cite_start]/* [cite: 36] */
-            background-color: #4f46e5; [cite_start]/* Indigo button background */ /* [cite: 36] */
-            color: white; [cite_start]/* White text */ /* [cite: 37] */
-            font-weight: 700; [cite_start]/* Bold font */ /* [cite: 38] */
-            padding: 0.75rem 2rem; [cite_start]/* Padding for button */ /* [cite: 39] */
-            border-radius: 9999px; [cite_start]/* Fully rounded button */ /* [cite: 40] */
-            transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out; [cite_start]/* [cite: 41] */
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); [cite_start]/* Subtle shadow */ /* [cite: 42] */
+            display: inline-block; /* */
+            background-color: #4f46e5; /* Indigo button background */ /* */
+            color: white; /* White text */ /* */
+            font-weight: 700; /* Bold font */ /* */
+            padding: 0.75rem 2rem; /* Padding for button */ /* */
+            border-radius: 9999px; /* Fully rounded button */ /* */
+            transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out; /* */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Subtle shadow */ /* */
         }
         .contact-form-container button:hover {
-            background-color: #4338ca; [cite_start]/* Darker indigo on hover */ /* [cite: 43] */
-            transform: translateY(-2px); [cite_start]/* Slight lift on hover */ /* [cite: 44] */
+            background-color: #4338ca; /* Darker indigo on hover */ /* */
+            transform: translateY(-2px); /* Slight lift on hover */ /* */
         }
 
         /* --- NEW CSS FOR TEAM SECTION --- */
         #our-team {
-            padding: 6rem 1rem; [cite_start]/* Consistent padding with other sections */ /* [cite: 45] */
-            background-color: #f1f5f9; [cite_start]/* A slightly different light gray for variety */ /* [cite: 46] */
-            text-align: center; [cite_start]/* [cite: 47] */
-            position: relative; [cite_start]/* Needed for carousel buttons */ /* [cite: 47] */
+            padding: 6rem 1rem; /* Consistent padding with other sections */ /* */
+            background-color: #f1f5f9; /* A slightly different light gray for variety */ /* */
+            text-align: center; /* */
+            position: relative; /* Needed for carousel buttons */ /* */
         }
 
         #our-team .section-heading {
-            margin-bottom: 3rem; [cite_start]/* Space below heading */ /* [cite: 48] */
+            margin-bottom: 3rem; /* Space below heading */ /* */
         }
 
         .team-members-carousel-container {
-            position: relative; [cite_start]/* [cite: 49] */
-            max-width: 1200px; [cite_start]/* Adjust max-width as needed for 4 columns */ /* [cite: 49] */
-            margin: 0 auto; [cite_start]/* [cite: 50] */
-            overflow: hidden; [cite_start]/* Hide members outside the current view */ /* [cite: 50] */
-            border-radius: 0.75rem; [cite_start]/* [cite: 51] */
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); [cite_start]/* [cite: 51] */
-            background-color: #ffffff; [cite_start]/* [cite: 52] */
+            position: relative; /* */
+            max-width: 1200px; /* Adjust max-width as needed for 4 columns */ /* */
+            margin: 0 auto; /* */
+            overflow: hidden; /* Hide members outside the current view */ /* */
+            border-radius: 0.75rem; /* */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* */
+            background-color: #ffffff; /* */
         }
 
         .team-members-track {
-            display: flex; [cite_start]/* Makes members line up horizontally */ /* [cite: 53] */
-            transition: transform 0.5s ease-in-out; [cite_start]/* Smooth slide transition */ /* [cite: 54] */
-            will-change: transform; [cite_start]/* [cite: 55] */
+            display: flex; /* Makes members line up horizontally */ /* */
+            transition: transform 0.5s ease-in-out; /* Smooth slide transition */ /* */
+            will-change: transform; /* */
+            white-space: nowrap; /* ADDED: Ensure flex items stay on one line */
         }
 
         .team-member-card {
-            min-width: calc(100% / 4); [cite_start]/* Each card takes 1/4 of the track width for desktop */ /* [cite: 56] */
-            box-sizing: border-box; [cite_start]/* Include padding/border in width */ /* [cite: 57] */
-            padding: 2.5rem; [cite_start]/* Ample padding inside card */ /* [cite: 58] */
-            margin: 0; [cite_start]/* Remove individual margins as flexbox handles spacing */ /* [cite: 59] */
-            text-align: center; [cite_start]/* [cite: 60] */
-            flex-shrink: 0; [cite_start]/* Prevent cards from shrinking */ /* [cite: 60] */
-            flex-grow: 0; [cite_start]/* Prevent cards from growing */ /* [cite: 61] */
-            border: 1px solid #e2e8f0; [cite_start]/* Light border */ /* [cite: 62] */
-            border-radius: 0.75rem; [cite_start]/* Rounded corners */ /* [cite: 63] */
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); [cite_start]/* Subtle shadow */ /* [cite: 64] */
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; [cite_start]/* [cite: 65] */
+            min-width: calc(100% / 4); /* Each card takes 1/4 of the track width for desktop */ /* */
+            box-sizing: border-box; /* Include padding/border in width */ /* */
+            padding: 2.5rem; /* Ample padding inside card */ /* */
+            margin: 0; /* Remove individual margins as flexbox handles spacing */ /* */
+            text-align: center; /* */
+            flex-shrink: 0; /* Prevent cards from shrinking */ /* */
+            flex-grow: 0; /* Prevent cards from growing */ /* */
+            border: 1px solid #e2e8f0; /* Light border */ /* */
+            border-radius: 0.75rem; /* Rounded corners */ /* */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Subtle shadow */ /* */
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* */
         }
 
         /* Adjust padding/margin for inner content if needed to prevent squishing */
         .team-member-card > * {
-            margin-left: auto; [cite_start]/* [cite: 66] */
-            margin-right: auto; [cite_start]/* [cite: 66] */
+            margin-left: auto; /* */
+            margin-right: auto; /* */
         }
 
 
         .team-member-card:hover {
-            transform: translateY(-5px); [cite_start]/* [cite: 67] */
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.08); [cite_start]/* [cite: 68] */
+            transform: translateY(-5px); /* */
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.08); /* */
         }
 
         .team-member-card h3 {
-            font-size: 2em; [cite_start]/* Larger name */ /* [cite: 69] */
-            font-weight: 700; [cite_start]/* Bold name */ /* [cite: 70] */
-            color: #1a202c; [cite_start]/* Dark text */ /* [cite: 71] */
-            margin-bottom: 0.5rem; [cite_start]/* [cite: 72] */
+            font-size: 2em; /* Larger name */ /* */
+            font-weight: 700; /* Bold name */ /* */
+            color: #1a202c; /* Dark text */ /* */
+            margin-bottom: 0.5rem; /* */
         }
 
         .team-member-card p {
-            font-size: 1.1em; [cite_start]/* [cite: 73] */
-            color: #4a5568; [cite_start]/* [cite: 73] */
-            margin-bottom: 0.5rem; [cite_start]/* [cite: 73] */
-            line-height: 1.5; [cite_start]/* [cite: 73] */
+            font-size: 1.1em; /* */
+            color: #4a5568; /* */
+            margin-bottom: 0.5rem; /* */
+            line-height: 1.5; /* */
         }
 
         .team-member-card p strong {
-            color: #333; [cite_start]/* [cite: 74] */
+            color: #333; /* */
         }
 
         .team-member-card .description {
-            font-size: 1em; [cite_start]/* [cite: 75] */
-            color: #64748b; [cite_start]/* Slightly lighter gray for description */ /* [cite: 75] */
-            margin-top: 1rem; [cite_start]/* [cite: 76] */
+            font-size: 1em; /* */
+            color: #64748b; /* Slightly lighter gray for description */ /* */
+            margin-top: 1rem; /* */
             /* Explicitly remove min-height and ensure text wrapping */
-            min-height: auto; [cite_start]/* Allow height to adjust dynamically */ /* [cite: 77] */
-            overflow: visible; [cite_start]/* Ensure content is not hidden */ /* [cite: 78] */
-            white-space: normal; [cite_start]/* Crucial: Ensures text wraps into paragraphs */ /* [cite: 79] */
-            text-overflow: clip; [cite_start]/* Prevent ellipsis, show full text */ /* [cite: 80] */
+            min-height: auto; /* Allow height to adjust dynamically */ /* */
+            overflow: visible; /* Ensure content is not hidden */ /* */
+            white-space: normal; /* Crucial: Ensures text wraps into paragraphs */ /* */
+            text-overflow: clip; /* Prevent ellipsis, show full text */ /* */
         }
 
         .team-member-card img {
-            width: 120px; [cite_start]/* [cite: 81] */
-            height: 120px; [cite_start]/* [cite: 81] */
-            border-radius: 50%; [cite_start]/* [cite: 81] */
-            object-fit: cover; [cite_start]/* [cite: 81] */
-            margin: 0 auto 1.5rem auto; [cite_start]/* [cite: 81] */
-            border: 4px solid #667eea; [cite_start]/* [cite: 82] */
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); [cite_start]/* [cite: 83] */
+            width: 120px; /* */
+            height: 120px; /* */
+            border-radius: 50%; /* */
+            object-fit: cover; /* */
+            margin: 0 auto 1.5rem auto; /* */
+            border: 4px solid #667eea; /* */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* */
         }
 
         /* Responsive adjustments for team cards */
         @media (max-width: 1024px) { /* On medium screens (tablets), show 2 per row */
             .team-member-card {
-                min-width: calc(100% / 2); [cite_start]/* [cite: 84] */
+                min-width: calc(100% / 2); /* */
             }
         }
         @media (max-width: 768px) { /* On small screens (mobile), show 1 per row */
             .team-member-card {
-                min-width: 100%; [cite_start]/* [cite: 85] */
+                min-width: 100%; /* */
             }
         }
 
         /* Common carousel button and dot styles */
         .carousel-button {
-            position: absolute; [cite_start]/* [cite: 86] */
-            top: 50%; [cite_start]/* [cite: 86] */
-            transform: translateY(-50%); [cite_start]/* [cite: 86] */
-            background-color: rgba(0, 0, 0, 0.5); [cite_start]/* [cite: 86] */
-            color: white; [cite_start]/* [cite: 86] */
-            border: none; [cite_start]/* [cite: 86] */
-            padding: 0.75rem 1rem; [cite_start]/* [cite: 86] */
-            cursor: pointer; [cite_start]/* [cite: 86] */
-            font-size: 1.5rem; [cite_start]/* [cite: 87] */
-            border-radius: 0.375rem; [cite_start]/* [cite: 87] */
-            transition: background-color 0.3s ease; [cite_start]/* [cite: 87] */
-            z-index: 10; [cite_start]/* [cite: 87] */
+            position: absolute; /* */
+            top: 50%; /* */
+            transform: translateY(-50%); /* */
+            background-color: rgba(0, 0, 0, 0.5); /* */
+            color: white; /* */
+            border: none; /* */
+            padding: 0.75rem 1rem; /* */
+            cursor: pointer; /* */
+            font-size: 1.5rem; /* */
+            border-radius: 0.375rem; /* */
+            transition: background-color 0.3s ease; /* */
+            z-index: 10; /* */
         }
         .carousel-button:hover {
-            background-color: rgba(0, 0, 0, 0.7); [cite_start]/* [cite: 88] */
+            background-color: rgba(0, 0, 0, 0.7); /* */
         }
         .carousel-button.prev {
-            left: 1rem; [cite_start]/* [cite: 89] */
+            left: 1rem; /* */
         }
         .carousel-button.next {
-            right: 1rem; [cite_start]/* [cite: 90] */
+            right: 1rem; /* */
         }
 
         .carousel-dots {
-            display: flex; [cite_start]/* [cite: 91] */
-            justify-content: center; [cite_start]/* [cite: 91] */
-            margin-top: 2rem; [cite_start]/* [cite: 91] */
-            gap: 0.75rem; [cite_start]/* [cite: 91] */
+            display: flex; /* */
+            justify-content: center; /* */
+            margin-top: 2rem; /* */
+            gap: 0.75rem; /* */
         }
         .dot {
-            width: 12px; [cite_start]/* [cite: 92] */
-            height: 12px; [cite_start]/* [cite: 92] */
-            background-color: #cbd5e1; [cite_start]/* [cite: 92] */
-            border-radius: 50%; [cite_start]/* [cite: 92] */
-            cursor: pointer; [cite_start]/* [cite: 92] */
-            transition: background-color 0.3s ease, transform 0.2s ease; [cite_start]/* [cite: 93] */
+            width: 12px; /* */
+            height: 12px; /* */
+            background-color: #cbd5e1; /* */
+            border-radius: 50%; /* */
+            cursor: pointer; /* */
+            transition: background-color 0.3s ease, transform 0.2s ease; /* */
         }
         .dot.active {
-            background-color: #4c51bf; [cite_start]/* [cite: 94] */
-            transform: scale(1.2); [cite_start]/* [cite: 94] */
+            background-color: #4c51bf; /* */
+            transform: scale(1.2); /* */
         }
 
         /* Specific styles for Client Reviews carousel (already existing) */
         #client-reviews {
-            padding: 6rem 1rem; [cite_start]/* [cite: 95] */
-            background-color: #e2e8f0; [cite_start]/* [cite: 95] */
-            text-align: center; [cite_start]/* [cite: 95] */
-            position: relative; [cite_start]/* [cite: 95] */
+            padding: 6rem 1rem; /* */
+            background-color: #e2e8f0; /* */
+            text-align: center; /* */
+            position: relative; /* */
         }
         #client-reviews .section-heading {
-            margin-bottom: 3rem; [cite_start]/* [cite: 96] */
+            margin-bottom: 3rem; /* */
         }
         .review-carousel-container { /* Changed name to avoid conflict with team carousel */
-            position: relative; [cite_start]/* [cite: 97] */
-            max-width: 800px; [cite_start]/* [cite: 97] */
-            margin: 0 auto; [cite_start]/* [cite: 97] */
-            overflow: hidden; [cite_start]/* [cite: 97] */
-            border-radius: 0.75rem; [cite_start]/* [cite: 97] */
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); [cite_start]/* [cite: 98] */
-            background-color: #ffffff; [cite_start]/* [cite: 98] */
+            position: relative; /* */
+            max-width: 800px; /* */
+            margin: 0 auto; /* */
+            overflow: hidden; /* */
+            border-radius: 0.75rem; /* */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* */
+            background-color: #ffffff; /* */
         }
         .review-carousel-track { /* Changed name */
-            display: flex; [cite_start]/* [cite: 99] */
-            transition: transform 0.5s ease-in-out; [cite_start]/* [cite: 99] */
-            will-change: transform; [cite_start]/* [cite: 99] */
+            display: flex; /* */
+            transition: transform 0.5s ease-in-out; /* */
+            will-change: transform; /* */
+            white-space: nowrap; /* ADDED: Ensure flex items stay on one line */
         }
         .review-card {
-            min-width: 100%; [cite_start]/* [cite: 100] */
-            box-sizing: border-box; [cite_start]/* [cite: 100] */
-            padding: 2.5rem; [cite_start]/* [cite: 100] */
-            text-align: left; [cite_start]/* [cite: 100] */
-            flex-shrink: 0; [cite_start]/* [cite: 100] */
-            flex-grow: 0; [cite_start]/* [cite: 100] */
-            width: 100%; [cite_start]/* [cite: 101] */
+            min-width: 100%; /* */
+            box-sizing: border-box; /* */
+            padding: 2.5rem; /* */
+            text-align: left; /* */
+            flex-shrink: 0; /* */
+            flex-grow: 0; /* */
+            width: 100%; /* */
         }
         .review-card h3 {
-            font-size: 1.6em; [cite_start]/* [cite: 102] */
-            font-weight: 600; [cite_start]/* [cite: 102] */
-            color: #334155; [cite_start]/* [cite: 102] */
-            margin-bottom: 0.5rem; [cite_start]/* [cite: 102] */
+            font-size: 1.6em; /* */
+            font-weight: 600; /* */
+            color: #334155; /* */
+            margin-bottom: 0.5rem; /* */
         }
         .review-card .client-info {
-            font-size: 1em; [cite_start]/* [cite: 103] */
-            color: #64748b; [cite_start]/* [cite: 103] */
-            margin-bottom: 1rem; [cite_start]/* [cite: 103] */
-            font-style: italic; [cite_start]/* [cite: 103] */
+            font-size: 1em; /* */
+            color: #64748b; /* */
+            margin-bottom: 1rem; /* */
+            font-style: italic; /* */
         }
         .review-card .review-text {
-            font-size: 1.05em; [cite_start]/* [cite: 104] */
-            color: #475569; [cite_start]/* [cite: 104] */
-            line-height: 1.7; [cite_start]/* [cite: 104] */
-            overflow-y: auto; [cite_start]/* [cite: 104] */
-            max-height: 200px; [cite_start]/* [cite: 104] */
+            font-size: 1.05em; /* */
+            color: #475569; /* */
+            line-height: 1.7; /* */
+            overflow-y: auto; /* */
+            max-height: 200px; /* */
         }
     </style>
 </head>
@@ -307,7 +309,7 @@
                 <a href="#services" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-gray-50">Services</a>
                 <a href="#about" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-gray-50">About Us</a>
                 <a href="#our-team" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-gray-50">Our Team</a>
-                [cite_start]<a href="#client-reviews" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-gray-50">Client Reviews</a> [cite: 106]
+                <a href="#client-reviews" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-gray-50">Client Reviews</a>
                 <a href="#contact" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-gray-50">Contact</a>
             </div>
         </nav>
@@ -316,10 +318,10 @@
     <section id="hero" class="hero-section text-center">
         <div class="container mx-auto px-4">
             <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in">
-                [cite_start]Your Trusted Partner in Digital Transformation. [cite: 107]
+                Your Trusted Partner in Digital Transformation.
             </h1>
             <p class="text-xl md:text-2xl font-light mb-8 opacity-90 animate-fade-in-delay">
-                [cite_start]Empowering businesses with innovative web, app, and data solutions. [cite: 108]
+                Empowering businesses with innovative web, app, and data solutions.
             </p>
             <a href="#contact" class="inline-block bg-white text-indigo-700 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-indigo-50 hover:scale-105 transition duration-300 animate-slide-up">
                 Get a Free Consultation
@@ -329,63 +331,63 @@
 
     <section id="services" class="py-16 bg-white">
         <div class="container mx-auto px-4 text-center">
-            [cite_start]<h2 class="text-4xl font-extrabold section-heading mb-12">Our Core Services</h2> [cite: 109]
+            <h2 class="text-4xl font-extrabold section-heading mb-12">Our Core Services</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                 <div class="service-card bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100">
                     <div class="text-indigo-600 text-5xl mb-4">
                         <i class="fas fa-laptop-code"></i>
-                    [cite_start]</div> [cite: 110]
+                    </div>
                     <h3 class="text-xl font-semibold mb-3 text-gray-800">Web Development</h3>
                     <p class="text-gray-600">Building responsive, user-friendly, and high-performance websites tailored to your business needs, from engaging landing pages to complex web applications.</p>
                 </div>
 
-                [cite_start]<div class="service-card bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100"> [cite: 111]
+                <div class="service-card bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100">
                     <div class="text-indigo-600 text-5xl mb-4">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
-                    [cite_start]<h3 class="text-xl font-semibold mb-3 text-gray-800">App Development</h3> [cite: 112]
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">App Development</h3>
                     <p class="text-gray-600">Crafting intuitive and robust mobile applications for iOS and Android, ensuring a seamless experience for your users and a powerful presence for your brand.</p>
                 </div>
 
                 <div class="service-card bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100">
-                    [cite_start]<div class="text-indigo-600 text-5xl mb-4"> [cite: 113]
+                    <div class="text-indigo-600 text-5xl mb-4">
                         <i class="fas fa-file-excel"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-3 text-gray-800">Excel Automation</h3>
-                    [cite_start]<p class="text-gray-600">Streamlining your data processes and reporting in Excel with advanced formulas, VBA macros, and custom solutions to save time and reduce manual effort.</p> [cite: 114]
+                    <p class="text-gray-600">Streamlining your data processes and reporting in Excel with advanced formulas, VBA macros, and custom solutions to save time and reduce manual effort.</p>
                 </div>
 
                 <div class="service-card bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100">
                     <div class="text-indigo-600 text-5xl mb-4">
-                        [cite_start]<i class="fas fa-chart-line"></i> [cite: 115]
+                        <i class="fas fa-chart-line"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-3 text-gray-800">Data Analytics</h3>
-                    <p class="text-gray-600">Uncovering hidden patterns, trends, and valuable insights from your raw data to support strategic decision-making and business growth. [cite_start]</p> [cite: 116]
+                    <p class="text-gray-600">Uncovering hidden patterns, trends, and valuable insights from your raw data to support strategic decision-making and business growth. </p>
                 </div>
 
                 <div class="service-card bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100">
                     <div class="text-indigo-600 text-5xl mb-4">
-                        [cite_start]<i class="fas fa-chart-bar"></i> [cite: 117]
+                        <i class="fas fa-chart-bar"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-3 text-gray-800">Tableau Dashboards</h3>
                     <p class="text-gray-600">Designing and developing interactive, intuitive, and visually compelling Tableau dashboards that empower users with actionable insights.</p>
                 </div>
 
-                [cite_start]<div class="service-card bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100"> [cite: 118]
+                <div class="service-card bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100">
                     <div class="text-indigo-600 text-5xl mb-4">
                         <i class="fas fa-chart-pie"></i>
                     </div>
-                    [cite_start]<h3 class="text-xl font-semibold mb-3 text-gray-800">Power BI Dashboards</h3> [cite: 119]
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Power BI Dashboards</h3>
                     <p class="text-gray-600">Creating dynamic and comprehensive Power BI reports and dashboards that integrate seamlessly with your Microsoft ecosystem for robust data analysis.</p>
                 </div>
 
                 <div class="service-card bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100">
-                    [cite_start]<div class="text-indigo-600 text-5xl mb-4"> [cite: 120]
+                    <div class="text-indigo-600 text-5xl mb-4">
                         <i class="fas fa-database"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-3 text-gray-800">Other Data Visualization</h3>
-                    [cite_start]<p class="text-gray-600">Leveraging various tools and techniques to present your data clearly and aesthetically, ensuring your story is told effectively.</p> [cite: 121]
+                    <p class="text-gray-600">Leveraging various tools and techniques to present your data clearly and aesthetically, ensuring your story is told effectively.</p>
                 </div>
 
             </div>
@@ -395,15 +397,15 @@
     <section id="about" class="py-16 bg-gray-100">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-4xl font-extrabold section-heading mb-12">About Us</h2>
-            [cite_start]<div class="max-w-3xl mx-auto text-gray-700 leading-relaxed text-lg"> [cite: 122]
+            <div class="max-w-3xl mx-auto text-gray-700 leading-relaxed text-lg">
                 <p class="mb-6">
-                    [cite_start]Gupta Consultancy Services (GCS) is a distinguished firm with over 3.5 years of expertise in comprehensive data analysis, robust risk management, and cutting-edge digital solution development. [cite: 123] [cite_start]Our core philosophy is anchored in the delivery of demonstrable results and profound strategic insights. [cite: 124]
+                    Gupta Consultancy Services (GCS) is a distinguished firm with over 3.5 years of expertise in comprehensive data analysis, robust risk management, and cutting-edge digital solution development. Our core philosophy is anchored in the delivery of demonstrable results and profound strategic insights.
                 </p>
                 <p class="mb-6">
-                    [cite_start]We specialize in seamlessly integrating advanced technical capabilities with astute business understanding to yield impactful outcomes. [cite: 125] [cite_start]Our extensive experience encompasses the formulation of effective risk-mitigation policies, precise identification of financial anomalies, optimization of customer conversion through innovative data visualization, and the automation of intricate data processes. [cite: 126] [cite_start]We are committed to providing sophisticated solutions that drive efficiency, reduce operational expenditures, and facilitate well-informed strategic decisions. [cite: 127]
+                    We specialize in seamlessly integrating advanced technical capabilities with astute business understanding to yield impactful outcomes. Our extensive experience encompasses the formulation of effective risk-mitigation policies, precise identification of financial anomalies, optimization of customer conversion through innovative data visualization, and the automation of intricate data processes. We are committed to providing sophisticated solutions that drive efficiency, reduce operational expenditures, and facilitate well-informed strategic decisions.
                 </p>
                 <p>
-                    [cite_start]At GCS, we are dedicated to transforming complex challenges into strategic opportunities, leveraging the power of data and technology to foster sustainable growth and deliver substantial value for our esteemed clientele. [cite: 128]
+                    At GCS, we are dedicated to transforming complex challenges into strategic opportunities, leveraging the power of data and technology to foster sustainable growth and deliver substantial value for our esteemed clientele.
                 </p>
             </div>
         </div>
@@ -413,7 +415,7 @@
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-extrabold section-heading">Our Team</h2>
             <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-12">
-                [cite_start]Our dedicated team is at the heart of everything we do, bringing expertise and passion to every project. [cite: 129] [cite_start]We're proud to highlight our talented developers who are instrumental in bringing your vision to life. [cite: 130]
+                Our dedicated team is at the heart of everything we do, bringing expertise and passion to every project. We're proud to highlight our talented developers who are instrumental in bringing your vision to life.
             </p>
 
             <div class="team-members-carousel-container">
@@ -421,7 +423,7 @@
                     <p class="p-8">Loading team members...</p>
                 </div>
                 <button class="carousel-button prev" id="prevTeamBtn">&#10094;</button>
-                [cite_start]<button class="carousel-button next" id="nextTeamBtn">&#10095;</button> [cite: 131]
+                <button class="carousel-button next" id="nextTeamBtn">&#10095;</button>
             </div>
             <div class="carousel-dots" id="teamCarouselDots"></div>
         </div>
@@ -431,82 +433,82 @@
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-extrabold section-heading">Client Reviews</h2>
             <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-12">
-                [cite_start]Hear directly from our clients about the exceptional work and dedication Palak brings to every Shopify development project. [cite: 132, 133]
+                Hear directly from our clients about the exceptional work and dedication Palak brings to every Shopify development project.
             </p>
 
             <div class="review-carousel-container">
                 <div class="review-carousel-track" id="reviewCarouselTrack">
                     <div class="review-card">
                         <h3>Upgrade Impulse to Shopify V2</h3>
-                        [cite_start]<p class="client-info">Client: Pip Guyatt</p> [cite: 134]
+                        <p class="client-info">Client: Pip Guyatt</p>
                         <p class="review-text">"Palak, has great communication skills, she offers ideas & solutions to existing problems with website that are valuable, she is very knowledgeable and very easy to work with. Will hie her again"</p>
                     </div>
 
-                    [cite_start]<div class="review-card"> [cite: 135]
+                    <div class="review-card">
                         <h3>Build a Shopify Store with Personalisation Aspects - Personalised Storybooks Preview</h3>
                         <p class="client-info">Client: Ashley West</p>
-                        [cite_start]<p class="review-text">"Palak has been amazing to work with. This project has gone on for a lot longer than expected, and she stuck with me right to the end. [cite: 136] [cite_start]Always had a positive attitude and wanted to make sure I was happy. [cite: 137, 138] [cite_start]There were countless revisions and questions and she always responded to me promptly. [cite: 139] [cite_start]I can't imagine anyone having a bad experience working with her. [cite: 140] Am happy to recommend!"</p>
+                        <p class="review-text">"Palak has been amazing to work with. This project has gone on for a lot longer than expected, and she stuck with me right to the end. Always had a positive attitude and wanted to make sure I was happy. There were countless revisions and questions and she always responded to me promptly. I can't imagine anyone having a bad experience working with her. Am happy to recommend!"</p>
                     </div>
 
                     <div class="review-card">
                         <h3>Website Development Needed for Small Project</h3>
-                        [cite_start]<p class="client-info">Client: Janine Cygan</p> [cite: 141]
-                        [cite_start]<p class="review-text">"Palak was amazing to work with! [cite: 142] She completely everything I asked for promptly!"</p>
+                        <p class="client-info">Client: Janine Cygan</p>
+                        <p class="review-text">"Palak was amazing to work with! She completely everything I asked for promptly!"</p>
                     </div>
 
                     <div class="review-card">
                         <h3>Experienced Shopify developer to create a professional website for a dress rental business</h3>
-                        [cite_start]<p class="client-info">Client: Jeannie Hood</p> [cite: 143]
-                        [cite_start]<p class="review-text">"We had an amazing experience working with Palak! [cite: 144] [cite_start]Before collaborating with her, we had no experience with website development, but she made the entire process incredibly smooth and stress-free. [cite: 145] [cite_start]Her clear and prompt communication ensured that we always knew what was happening and felt confident in each step of the project. [cite: 146] [cite_start]From the beginning, we provided a specific brief, and Palak was not only receptive to our vision but also took on all of our feedback with enthusiasm. [cite: 147] [cite_start]She worked diligently to bring our website to life, making thoughtful adjustments along the way to ensure it matched our expectations perfectly. [cite: 148] [cite_start]Her professionalism, attention to detail, and willingness to accommodate our requests made this an enjoyable and seamless experience. [cite: 149] We highly recommend Palak to anyone looking to build a website—her skills, efficiency, and dedication truly stand out!"</p>
+                        <p class="client-info">Client: Jeannie Hood</p>
+                        <p class="review-text">"We had an amazing experience working with Palak! Before collaborating with her, we had no experience with website development, but she made the entire process incredibly smooth and stress-free. Her clear and prompt communication ensured that we always knew what was happening and felt confident in each step of the project. From the beginning, we provided a specific brief, and Palak was not only receptive to our vision but also took on all of our feedback with enthusiasm. She worked diligently to bring our website to life, making thoughtful adjustments along the way to ensure it matched our expectations perfectly. Her professionalism, attention to detail, and willingness to accommodate our requests made this an enjoyable and seamless experience. We highly recommend Palak to anyone looking to build a website—her skills, efficiency, and dedication truly stand out!"</p>
                     </div>
 
                     <div class="review-card">
                         <h3>Shopify Expert Needed for Store Restructuring and Optimization</h3>
-                        [cite_start]<p class="client-info">Client: Charmaine Brown</p> [cite: 150]
-                        [cite_start]<p class="review-text">"⭐️⭐️⭐️⭐️⭐️ Amazing Shopify Expert! [cite: 151] [cite_start]Palak did an outstanding job optimizing and restructuring my Shopify store. [cite: 152] [cite_start]She was incredibly responsive, knowledgeable, and easy to work with throughout the entire process. [cite: 153] [cite_start]Her expertise helped streamline my store’s functionality and improve its overall design and user experience. [cite: 154] [cite_start]I truly appreciated her attention to detail and willingness to go above and beyond to ensure everything was perfect. [cite: 155] I highly recommend Palak to anyone looking for a skilled Shopify expert!"</p>
+                        <p class="client-info">Client: Charmaine Brown</p>
+                        <p class="review-text">"⭐️⭐️⭐️⭐️⭐️ Amazing Shopify Expert! Palak did an outstanding job optimizing and restructuring my Shopify store. She was incredibly responsive, knowledgeable, and easy to work with throughout the entire process. Her expertise helped streamline my store’s functionality and improve its overall design and user experience. I truly appreciated her attention to detail and willingness to go above and beyond to ensure everything was perfect. I highly recommend Palak to anyone looking for a skilled Shopify expert!"</p>
                     </div>
 
                     <div class="review-card">
                         <h3>Shopify Redesign Page</h3>
-                        [cite_start]<p class="client-info">Client: Anja Edwards</p> [cite: 156]
-                        [cite_start]<p class="review-text">"Worked with Palak on redesign of my entire website. [cite: 157] She was amazing. She is very knowledgeable, was able to get everything done in a quick and efficient manner."</p>
+                        <p class="client-info">Client: Anja Edwards</p>
+                        <p class="review-text">"Worked with Palak on redesign of my entire website. She was amazing. She is very knowledgeable, was able to get everything done in a quick and efficient manner."</p>
                     </div>
 
                     <div class="review-card">
                         <h3>Shopify Website Redesign: Create a High-End Lifestyle Experience for My Tiny Home Hub</h3>
-                        [cite_start]<p class="client-info">Client: Cameron Jovan, My Tiny Home Hub</p> [cite: 158]
-                        [cite_start]<p class="review-text">"Palak did an amazing job bringing my vision to life for the design of my product page. [cite: 159] [cite_start]It wasn't an easy task, but she was able to comprehend it with the right guidance and execute it flawlessly and in a way that didn't leave anything additional to be desired. [cite: 160] I would rate her a 10 out of 10!"</p>
+                        <p class="client-info">Client: Cameron Jovan, My Tiny Home Hub</p>
+                        <p class="review-text">"Palak did an amazing job bringing my vision to life for the design of my product page. It wasn't an easy task, but she was able to comprehend it with the right guidance and execute it flawlessly and in a way that didn't leave anything additional to be desired. I would rate her a 10 out of 10!"</p>
                     </div>
 
                     <div class="review-card">
                         <h3>Rebuild Shopify website for skincare brand</h3>
-                        [cite_start]<p class="client-info">Client: Mariela Perez Calderon</p> [cite: 161]
-                        [cite_start]<p class="review-text">"Created a beautiful website with everything that was asked for. [cite: 162] I recommended Palak to a friend of my as well!"</p>
+                        <p class="client-info">Client: Mariela Perez Calderon</p>
+                        <p class="review-text">"Created a beautiful website with everything that was asked for. I recommended Palak to a friend of my as well!"</p>
                     </div>
 
                     <div class="review-card">
                         <h3>Re-design of existing Shopify store with updates</h3>
-                        [cite_start]<p class="client-info">Client: Dennis Rambo</p> [cite: 163]
-                        [cite_start]<p class="review-text">"Attention to detail and dedication. [cite: 164] Quick to respond to any queries, receptive to feedback, and consistently met project milestones."</p>
+                        <p class="client-info">Client: Dennis Rambo</p>
+                        <p class="review-text">"Attention to detail and dedication. Quick to respond to any queries, receptive to feedback, and consistently met project milestones."</p>
                     </div>
 
                     <div class="review-card">
                         <h3>Shopify enhancements - dynamic text based on tags</h3>
-                        [cite_start]<p class="client-info">Client: Michael Roedeske, P4P Solutions GmbH</p> [cite: 165]
-                        [cite_start]<p class="review-text">"Highly skilled and experiences Shopify and HTML developer. [cite: 166] Clear communicationa and in-time delivery. We realized already several enhancements with her support."</p>
+                        <p class="client-info">Client: Michael Roedeske, P4P Solutions GmbH</p>
+                        <p class="review-text">"Highly skilled and experiences Shopify and HTML developer. Clear communicationa and in-time delivery. We realized already several enhancements with her support."</p>
                     </div>
 
                     <div class="review-card">
                         <h3>Shopify Store Developer</h3>
-                        [cite_start]<p class="client-info">Client: Joyce Hwang</p> [cite: 167]
-                        [cite_start]<p class="review-text">"I had the pleasure of working with Palak. [cite: 168] She is great at meeting deadlines and is very responsive and flexible. [cite_start]High quality of work and very professional! [cite: 169] Definitely will continue to work with her!"</p>
+                        <p class="client-info">Client: Joyce Hwang</p>
+                        <p class="review-text">"I had the pleasure of working with Palak. She is great at meeting deadlines and is very responsive and flexible. High quality of work and very professional! Definitely will continue to work with her!"</p>
                     </div>
                 </div>
 
                 <button class="carousel-button prev" id="prevReviewBtn">&#10094;</button>
                 <button class="carousel-button next" id="nextReviewBtn">&#10095;</button>
             </div>
-            [cite_start]<div class="carousel-dots" id="reviewCarouselDots"></div> [cite: 170]
+            <div class="carousel-dots" id="reviewCarouselDots"></div>
         </div>
     </section>
 
@@ -514,42 +516,42 @@
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-extrabold mb-8">Ready to Start Your Project?</h2>
             <p class="text-xl font-light mb-10 max-w-2xl mx-auto opacity-90">
-                [cite_start]Let's discuss how we can help you achieve your business goals with our expert web development, app development, and data analytics services. [cite: 171]
+                Let's discuss how we can help you achieve your business goals with our expert web development, app development, and data analytics services.
             </p>
             <div class="contact-form-container text-left">
                 <form action="https://formspree.io/f/xvgrbzeg" method="POST">
                     <div class="mb-4">
-                        [cite_start]<label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name:</label> [cite: 172]
+                        <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name:</label>
                         <input type="text" id="name" name="name" placeholder="Your Name" required
                                class="shadow-sm appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
-                    [cite_start]</div> [cite: 173]
+                    </div>
                     <div class="mb-4">
                         <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
                         <input type="email" id="email" name="_replyto" placeholder="your@email.com" required
-                               [cite_start]class="shadow-sm appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"> [cite: 174]
+                               class="shadow-sm appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
                     </div>
                     <div class="mb-6">
                         <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message:</label>
                         <textarea id="message" name="message" rows="5" placeholder="Your message here..." required
-                                  [cite_start]class="shadow-sm appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"></textarea> [cite: 175]
+                                  class="shadow-sm appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"></textarea>
                     </div>
-                    [cite_start]<div class="text-center"> [cite: 176]
+                    <div class="text-center">
                         <button type="submit"
                                 class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-full focus:outline-none focus:shadow-outline transition duration-300 ease-in-out transform hover:-translate-y-1">
-                            [cite_start]Send Message [cite: 177]
+                            Send Message
                         </button>
                     </div>
                 </form>
             </div>
             <p class="text-xs text-indigo-200 mt-4">
-                [cite_start]*Please visit Formspree.io (or a similar service) to get your unique form endpoint and replace "YOUR_FORMSPREE_ENDPOINT_HERE" in the HTML. [cite: 178, 179]
+                *Please visit Formspree.io (or a similar service) to get your unique form endpoint and replace "YOUR_FORMSPREE_ENDPOINT_HERE" in the HTML.
             </p>
         </div>
     </section>
 
     <footer class="bg-gray-800 text-gray-300 py-8">
         <div class="container mx-auto px-4 text-center text-sm">
-            <p>&copy; 2025 Gupta Consultancy Services (GCS). [cite_start]All rights reserved.</p> [cite: 180]
+            <p>&copy; 2025 Gupta Consultancy Services (GCS). All rights reserved.</p>
             <p class="mt-2">Contact: <a href="mailto:gcs.consultancy.in@gmail.com" class="text-indigo-400 hover:underline">gcs.consultancy.in@gmail.com</a></p>
             <p class="mt-1">
                 <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_PROFILE_ID" target="_blank" class="text-indigo-400 hover:underline">Connect with GCS on LinkedIn</a>
@@ -558,7 +560,7 @@
     </footer>
 
     <script>
-        [cite_start]// Smooth scrolling for navigation links [cite: 181]
+        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -566,50 +568,50 @@
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
-            [cite_start]}); [cite: 182]
+            });
         });
         // --- Client Reviews Carousel Functionality ---
-        [cite_start]const reviewCarouselTrack = document.getElementById('reviewCarouselTrack'); [cite: 183]
-        [cite_start]const reviewCards = Array.from(reviewCarouselTrack.children); [cite: 184]
+        const reviewCarouselTrack = document.getElementById('reviewCarouselTrack');
+        const reviewCards = Array.from(reviewCarouselTrack.children);
         const prevReviewBtn = document.getElementById('prevReviewBtn');
         const nextReviewBtn = document.getElementById('nextReviewBtn');
         const reviewCarouselDotsContainer = document.getElementById('reviewCarouselDots');
 
-        [cite_start]let currentReviewIndex = 0; [cite: 185]
-        [cite_start]let autoReviewSlideInterval; [cite: 185]
-        [cite_start]const reviewSlideIntervalTime = 5000; [cite: 185]
+        let currentReviewIndex = 0;
+        let autoReviewSlideInterval;
+        const reviewSlideIntervalTime = 5000;
 
         function updateReviewCarousel() {
-            [cite_start]const offset = -currentReviewIndex * 100; [cite: 186]
+            const offset = -currentReviewIndex * 100;
             reviewCarouselTrack.style.transform = `translateX(${offset}%)`;
             updateReviewDots();
         }
 
         function showNextReviewSlide() {
-            [cite_start]currentReviewIndex = (currentReviewIndex + 1) % reviewCards.length; [cite: 187]
+            currentReviewIndex = (currentReviewIndex + 1) % reviewCards.length;
             updateReviewCarousel();
         }
 
         function showPrevReviewSlide() {
-            [cite_start]currentReviewIndex = (currentReviewIndex - 1 + reviewCards.length) % reviewCards.length; [cite: 188]
+            currentReviewIndex = (currentReviewIndex - 1 + reviewCards.length) % reviewCards.length;
             updateReviewCarousel();
         }
 
         function createReviewDots() {
-            [cite_start]reviewCarouselDotsContainer.innerHTML = ''; [cite: 189]
+            reviewCarouselDotsContainer.innerHTML = '';
             reviewCards.forEach((_, index) => {
                 const dot = document.createElement('span');
                 dot.classList.add('dot');
                 if (index === currentReviewIndex) {
                     dot.classList.add('active');
                 }
-                [cite_start]dot.addEventListener('click', () => { [cite: 190]
+                dot.addEventListener('click', () => {
                     currentReviewIndex = index;
                     updateReviewCarousel();
                     resetAutoReviewSlide();
                 });
-                [cite_start]reviewCarouselDotsContainer.appendChild(dot); [cite: 191]
-            [cite_start]}); [cite: 192]
+                reviewCarouselDotsContainer.appendChild(dot);
+            });
         }
 
         function updateReviewDots() {
@@ -617,94 +619,95 @@
                 if (index === currentReviewIndex) {
                     dot.classList.add('active');
                 } else {
-                    [cite_start]dot.classList.remove('active'); [cite: 193]
+                    dot.classList.remove('active');
                 }
-            [cite_start]}); [cite: 194]
+            });
         }
 
         function startAutoReviewSlide() {
-            [cite_start]autoReviewSlideInterval = setInterval(showNextReviewSlide, reviewSlideIntervalTime); [cite: 195]
+            autoReviewSlideInterval = setInterval(showNextReviewSlide, reviewSlideIntervalTime);
         }
 
         function resetAutoReviewSlide() {
-            [cite_start]clearInterval(autoReviewSlideInterval); [cite: 196]
+            clearInterval(autoReviewSlideInterval);
             startAutoReviewSlide();
         }
 
-        prevReviewBtn.addEventListener('click', () => {
-            showPrevReviewSlide();
-            resetAutoReviewSlide();
-        [cite_start]}); [cite: 197]
-        nextReviewBtn.addEventListener('click', () => {
-            showNextReviewSlide();
-            resetAutoReviewSlide();
-        [cite_start]}); [cite: 197]
         document.addEventListener('DOMContentLoaded', () => {
             if (reviewCards.length > 0) {
                 createReviewDots();
                 updateReviewCarousel();
                 startAutoReviewSlide();
             }
-        [cite_start]}); [cite: 198]
+        });
+
+        prevReviewBtn.addEventListener('click', () => {
+            showPrevReviewSlide();
+            resetAutoReviewSlide();
+        });
+        nextReviewBtn.addEventListener('click', () => {
+            showNextReviewSlide();
+            resetAutoReviewSlide();
+        });
         // --- End Client Reviews Carousel Functionality ---
 
 
         // --- Google Sheets Team Members Loading Functionality ---
-        [cite_start]const GOOGLE_SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR-9ZE-RHcbVh69G9Hrk8cM_gy6hDbYwHFM_fCFiMgR5-HyHEHq46yGsROD-0nmpOi-gc_6XWpJIMPx/pub?gid=0&single=true&output=csv'; [cite: 199, 200]
+        const GOOGLE_SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR-9ZE-RHcbVh69G9Hrk8cM_gy6hDbYwHFM_fCFiMgR5-HyHEHq46yGsROD-0nmpOi-gc_6XWpJIMPx/pub?gid=0&single=true&output=csv';
         // More robust CSV parser function
         function parseCSV(text) {
-            [cite_start]const rows = []; [cite: 201]
-            [cite_start]let inQuote = false; [cite: 201]
-            [cite_start]let currentCell = ''; [cite: 201]
-            [cite_start]let currentRow = []; [cite: 201, 202]
+            const rows = [];
+            let inQuote = false;
+            let currentCell = '';
+            let currentRow = [];
             for (let i = 0; i < text.length; i++) {
-                [cite_start]const char = text[i]; [cite: 202, 203]
-                [cite_start]const nextChar = text[i + 1]; [cite: 203]
+                const char = text[i];
+                const nextChar = text[i + 1];
 
                 if (char === '"') {
                     if (inQuote && nextChar === '"') { // Handle escaped double quotes ""
-                        [cite_start]currentCell += char; [cite: 204]
-                        i++; [cite_start]// Skip next quote [cite: 204]
+                        currentCell += char;
+                        i++; // Skip next quote
                     } else {
-                        [cite_start]inQuote = !inQuote; [cite: 205] // Toggle quote state
+                        inQuote = !inQuote; // Toggle quote state
                     }
                 } else if (char === ',' && !inQuote) {
-                    [cite_start]currentRow.push(currentCell.trim()); [cite: 206]
-                    [cite_start]currentCell = ''; [cite: 206]
+                    currentRow.push(currentCell.trim());
+                    currentCell = '';
                 } else if (char === '\n' && !inQuote) {
                     // Handle CRLF and LF line endings
                     if (i > 0 && text[i - 1] === '\r') {
-                        [cite_start]currentCell = currentCell.slice(0, -1); [cite: 207] // Remove trailing CR if LF follows
+                        currentCell = currentCell.slice(0, -1); // Remove trailing CR if LF follows
                     }
-                    [cite_start]currentRow.push(currentCell.trim()); [cite: 208]
+                    currentRow.push(currentCell.trim());
                     // Only add row if it's not empty or just whitespace
                     if (currentRow.some(cell => cell.length > 0)) {
-                        [cite_start]rows.push(currentRow); [cite: 209]
+                        rows.push(currentRow);
                     }
-                    [cite_start]currentRow = []; [cite: 210]
-                    [cite_start]currentCell = ''; [cite: 210]
+                    currentRow = [];
+                    currentCell = '';
                 } else {
-                    [cite_start]currentCell += char; [cite: 211]
+                    currentCell += char;
                 }
             }
             // Add the last row if the CSV doesn't end with a newline and has content
             if (currentCell.length > 0 || currentRow.some(cell => cell.length > 0)) {
-                [cite_start]currentRow.push(currentCell.trim()); [cite: 212]
-                [cite_start]rows.push(currentRow); [cite: 212]
+                currentRow.push(currentCell.trim());
+                rows.push(currentRow);
             }
-            [cite_start]return rows.filter(row => row.some(cell => cell !== '')); [cite: 213] // Final filter for truly empty rows
+            return rows.filter(row => row.some(cell => cell !== '')); // Final filter for truly empty rows
         }
 
         // --- Team Members Carousel specific variables and functions ---
-        [cite_start]const teamMembersTrack = document.getElementById('teamMembersTrack'); [cite: 214]
+        const teamMembersTrack = document.getElementById('teamMembersTrack');
         const prevTeamBtn = document.getElementById('prevTeamBtn');
         const nextTeamBtn = document.getElementById('nextTeamBtn');
         const teamCarouselDotsContainer = document.getElementById('teamCarouselDots');
 
-        let teamMembers = []; [cite_start]// Store the fetched team members data [cite: 215]
-        let currentTeamSlideIndex = 0; [cite_start]// This is now the index of the first visible member [cite: 217]
-        [cite_start]let autoTeamSlideInterval; [cite: 218]
-        const teamSlideIntervalTime = 5000; [cite_start]// 5 seconds [cite: 218]
+        let teamMembers = []; // Store the fetched team members data
+        let currentTeamSlideIndex = 0; // This is now the index of the first visible member
+        let autoTeamSlideInterval;
+        const teamSlideIntervalTime = 5000; // 5 seconds
 
         // Helper function to get the number of members per view based on screen size
         function getMembersPerView() {
@@ -719,153 +722,181 @@
 
         function updateTeamCarousel() {
             const currentMembersPerView = getMembersPerView();
-            [cite_start]const offset = -currentTeamSlideIndex * (100 / currentMembersPerView); [cite: 219]
+            const offset = -currentTeamSlideIndex * (100 / currentMembersPerView);
             teamMembersTrack.style.transform = `translateX(${offset}%)`;
             updateTeamDots();
+
+            // Enable/disable buttons based on slide position
+            const maxIndex = Math.max(0, teamMembers.length - currentMembersPerView);
+            if (maxIndex <= 0) { // All members fit, hide buttons
+                prevTeamBtn.style.display = 'none';
+                nextTeamBtn.style.display = 'none';
+            } else { // Multiple slides exist
+                prevTeamBtn.style.display = currentTeamSlideIndex === 0 ? 'none' : '';
+                nextTeamBtn.style.display = currentTeamSlideIndex === maxIndex ? 'none' : '';
+            }
         }
 
         function showNextTeamSlide() {
             const currentMembersPerView = getMembersPerView();
-            const maxIndex = Math.max(0, teamMembers.length - currentMembersPerView); [cite_start]// Max index for the first visible member [cite: 220]
+            const maxIndex = Math.max(0, teamMembers.length - currentMembersPerView);
+            if (maxIndex === 0) return; // No need to slide if all fit
+
             if (currentTeamSlideIndex < maxIndex) {
-                [cite_start]currentTeamSlideIndex++; [cite: 221]
+                currentTeamSlideIndex++;
             } else {
-                [cite_start]currentTeamSlideIndex = 0; [cite: 222] // Loop back to the start
+                currentTeamSlideIndex = 0; // Loop back to the start
             }
-            [cite_start]updateTeamCarousel(); [cite: 223]
+            updateTeamCarousel();
         }
 
         function showPrevTeamSlide() {
             const currentMembersPerView = getMembersPerView();
-            const maxIndex = Math.max(0, teamMembers.length - currentMembersPerView); [cite_start]// Max index for the first visible member [cite: 224]
+            const maxIndex = Math.max(0, teamMembers.length - currentMembersPerView);
+            if (maxIndex === 0) return; // No need to slide if all fit
+
             if (currentTeamSlideIndex > 0) {
-                [cite_start]currentTeamSlideIndex--; [cite: 225]
+                currentTeamSlideIndex--;
             } else {
-                currentTeamSlideIndex = maxIndex; [cite_start]// Loop to the end, or stay at 0 if only one slide [cite: 226]
+                currentTeamSlideIndex = maxIndex; // Loop to the end
             }
-            [cite_start]updateTeamCarousel(); [cite: 227]
+            updateTeamCarousel();
         }
 
         function createTeamDots() {
-            [cite_start]teamCarouselDotsContainer.innerHTML = ''; [cite: 228]
+            teamCarouselDotsContainer.innerHTML = '';
             const currentMembersPerView = getMembersPerView();
-            // Create a dot for each "slide" that can be shown.
-            // A slide is a group of membersPerView members.
             const numberOfSlides = Math.ceil(teamMembers.length / currentMembersPerView);
+
+            // Hide dots if only one slide is needed
+            if (numberOfSlides <= 1) {
+                teamCarouselDotsContainer.style.display = 'none';
+                return;
+            } else {
+                teamCarouselDotsContainer.style.display = 'flex'; // Ensure it's visible if multiple slides
+            }
 
             for (let i = 0; i < numberOfSlides; i++) {
                 const dot = document.createElement('span');
                 dot.classList.add('dot');
-                [cite_start]if (i === currentTeamSlideIndex) { [cite: 230]
+                if (i === currentTeamSlideIndex) {
                     dot.classList.add('active');
                 }
                 dot.addEventListener('click', () => {
-                    currentTeamSlideIndex = i; // Set to the clicked slide index
+                    currentTeamSlideIndex = i;
                     updateTeamCarousel();
                     resetAutoTeamSlide();
                 });
-                [cite_start]teamCarouselDotsContainer.appendChild(dot); [cite: 232]
+                teamCarouselDotsContainer.appendChild(dot);
             }
         }
 
         function updateTeamDots() {
             Array.from(teamCarouselDotsContainer.children).forEach((dot, index) => {
-                // A dot is active if its index matches the currentTeamSlideIndex
-                // This means the dot represents the *start* of the currently viewed slide.
-                [cite_start]if (index === currentTeamSlideIndex) { [cite: 234]
+                if (index === currentTeamSlideIndex) {
                     dot.classList.add('active');
                 } else {
-                    [cite_start]dot.classList.remove('active'); [cite: 235]
+                    dot.classList.remove('active');
                 }
-            [cite_start]}); [cite: 236]
+            });
         }
 
         function startAutoTeamSlide() {
-            [cite_start]autoTeamSlideInterval = setInterval(showNextTeamSlide, teamSlideIntervalTime); [cite: 237]
+            clearInterval(autoTeamSlideInterval); // Clear any existing interval
+            const currentMembersPerView = getMembersPerView();
+            const maxIndex = Math.max(0, teamMembers.length - currentMembersPerView);
+            if (maxIndex > 0) { // Only auto slide if there are multiple slides
+                autoTeamSlideInterval = setInterval(showNextTeamSlide, teamSlideIntervalTime);
+            }
         }
 
         function resetAutoTeamSlide() {
-            [cite_start]clearInterval(autoTeamSlideInterval); [cite: 238]
+            clearInterval(autoTeamSlideInterval);
             startAutoTeamSlide();
         }
 
         async function fetchTeamMembers() {
-            [cite_start]const teamContainer = teamMembersTrack; [cite: 239] // Now the track itself is the container for members
-            [cite_start]teamContainer.innerHTML = '<p class="p-8">Loading team members...</p>'; [cite: 240]
+            const teamContainer = teamMembersTrack;
+            teamContainer.innerHTML = '<p class="p-8">Loading team members...</p>';
             try {
-                [cite_start]console.log('Attempting to fetch team data from:', GOOGLE_SHEET_CSV_URL); [cite: 241]
+                console.log('Attempting to fetch team data from:', GOOGLE_SHEET_CSV_URL);
                 const response = await fetch(GOOGLE_SHEET_CSV_URL);
 
                 if (!response.ok) {
-                    [cite_start]const errorText = await response.text(); [cite: 242]
+                    const errorText = await response.text();
                     console.error('Fetch failed:', response.status, response.statusText, errorText);
-                    [cite_start]throw new Error(`Network response was not ok. Status: ${response.status} ${response.statusText}`); [cite: 243]
+                    throw new Error(`Network response was not ok. Status: ${response.status} ${response.statusText}`);
                 }
 
-                [cite_start]const csvText = await response.text(); [cite: 244]
-                console.log('CSV team data fetched successfully (first 200 chars):', csvText.substring(0, Math.min(csvText.length, 200)) + '...');
-
-                [cite_start]const rows = parseCSV(csvText); [cite: 245]
-                console.log('Parsed team rows (using robust parser):', rows);
+                const csvText = await response.text();
+                console.log('Fetched CSV Text:', csvText); // Log raw CSV
+                const rows = parseCSV(csvText);
+                console.log('Parsed Rows:', rows); // Log parsed rows
+                console.log('Headers:', rows.length > 0 ? rows[0] : 'No Headers'); // Log headers
+                console.log('First Data Row:', rows.length > 1 ? rows[1] : 'No Data Rows'); // Log first data row
 
                 if (rows.length < 2) {
-                    [cite_start]teamContainer.innerHTML = '<p class="p-8">No team member data found in the Google Sheet, or the sheet is empty (only headers).</p>'; [cite: 246]
+                    teamContainer.innerHTML = '<p class="p-8">No team member data found in the Google Sheet, or the sheet is empty (only headers).</p>';
                     console.warn('Google Sheet has no data rows or is malformed for team data:', rows);
-                    [cite_start]return; [cite: 247]
+                    // Ensure buttons and dots are hidden if no data
+                    prevTeamBtn.style.display = 'none';
+                    nextTeamBtn.style.display = 'none';
+                    teamCarouselDotsContainer.style.display = 'none';
+                    return;
                 }
 
-                [cite_start]const headers = rows[0].map(header => header.toLowerCase().replace(/\s/g, '')); [cite: 248]
+                const headers = rows[0].map(header => header.toLowerCase().replace(/\s/g, ''));
                 console.log('Normalized Headers from team sheet:', headers);
 
-                teamMembers = []; [cite_start]// Reset teamMembers array [cite: 248]
+                teamMembers = []; // Reset teamMembers array
                 rows.slice(1).forEach((row, rowIndex) => { // Skip header row
                     // Find column indices dynamically using normalized headers
-                    [cite_start]const nameIndex = headers.indexOf('name'); [cite: 249]
-                    [cite_start]const roleIndex = headers.indexOf('role'); [cite: 249]
+                    const nameIndex = headers.indexOf('name');
+                    const roleIndex = headers.indexOf('role');
                     const experienceIndex = headers.indexOf('experience');
                     const aboutIndex = headers.indexOf('about');
                     const imageUrlIndex = headers.indexOf('imageurl');
-                    [cite_start]const linkedInIndex = headers.indexOf('linkedin'); [cite: 250]
+                    const linkedInIndex = headers.indexOf('linkedin');
 
                     // Ensure essential columns exist and have data for this row
                     if (nameIndex === -1 || roleIndex === -1 || aboutIndex === -1 ||
                         !row[nameIndex] || !row[roleIndex] || !row[aboutIndex]) {
-                        [cite_start]console.warn(`Skipping row ${rowIndex + 1} due to missing header or empty data for "Name", "Role", or "About". Raw row:`, row); [cite: 251, 252]
-                        return; [cite_start]// Skip this row if critical data is missing [cite: 252]
+                        console.warn(`Skipping row ${rowIndex + 1} due to missing header or empty data for "Name", "Role", or "About". Raw row:`, row);
+                        return; // Skip this row if critical data is missing
                     }
 
-                    [cite_start]const name = row[nameIndex]; [cite: 253]
-                    [cite_start]const role = row[roleIndex]; [cite: 253]
-                    [cite_start]const experience = (experienceIndex !== -1 && row[experienceIndex]) ? row[experienceIndex] : 'Not specified'; [cite: 254]
-                    [cite_start]const about = row[aboutIndex]; [cite: 254]
-                    [cite_start]const imageUrl = (imageUrlIndex !== -1 && row[imageUrlIndex]) ? row[imageUrlIndex] : 'https://via.placeholder.com/120?text=No+Image'; [cite: 255]
-                    [cite_start]const linkedIn = (linkedInIndex !== -1 && row[linkedInIndex]) ? row[linkedInIndex] : ''; [cite: 255]
+                    const name = row[nameIndex];
+                    const role = row[roleIndex];
+                    const experience = (experienceIndex !== -1 && row[experienceIndex]) ? row[experienceIndex] : 'Not specified';
+                    const about = row[aboutIndex];
+                    const imageUrl = (imageUrlIndex !== -1 && row[imageUrlIndex]) ? row[imageUrlIndex] : 'https://via.placeholder.com/120?text=No+Image';
+                    const linkedIn = (linkedInIndex !== -1 && row[linkedInIndex]) ? row[linkedInIndex] : '';
 
-                    [cite_start]teamMembers.push({ name, role, experience, about, imageUrl, linkedIn }); [cite: 256]
+                    teamMembers.push({ name, role, experience, about, imageUrl, linkedIn });
                 });
 
                 // Clear the loading message
-                [cite_start]teamContainer.innerHTML = ''; [cite: 257]
-                [cite_start]let membersRendered = 0; [cite: 257]
+                teamContainer.innerHTML = '';
+                let membersRendered = 0;
                 if (teamMembers.length > 0) {
                     teamMembers.forEach(member => {
                         const memberDiv = document.createElement('div');
                         memberDiv.classList.add('team-member-card');
 
-                        [cite_start]const memberImage = document.createElement('img'); [cite: 258]
+                        const memberImage = document.createElement('img');
                         memberImage.src = member.imageUrl;
                         memberImage.alt = member.name + " profile picture";
                         memberDiv.appendChild(memberImage);
 
-                        [cite_start]const memberName = document.createElement('h3'); [cite: 259]
+                        const memberName = document.createElement('h3');
                         memberName.textContent = member.name;
                         memberDiv.appendChild(memberName);
 
-                        [cite_start]const memberRole = document.createElement('p'); [cite: 260]
+                        const memberRole = document.createElement('p');
                         memberRole.innerHTML = `<strong>Title:</strong> ${member.role}`;
                         memberDiv.appendChild(memberRole);
 
-                        [cite_start]const memberExperience = document.createElement('p'); [cite: 261]
+                        const memberExperience = document.createElement('p');
                         memberExperience.innerHTML = `<strong>Experience:</strong> ${member.experience}`;
                         memberDiv.appendChild(memberExperience);
 
@@ -873,75 +904,57 @@
                         memberAbout.classList.add('description');
                         memberAbout.textContent = member.about;
                         memberDiv.appendChild(memberAbout);
-                        [cite_start]if (member.linkedIn && (member.linkedIn.startsWith('http://') || member.linkedIn.startsWith('https://'))) { [cite: 262]
-                            [cite_start]const memberLinkedIn = document.createElement('a'); [cite: 263]
+                        if (member.linkedIn && (member.linkedIn.startsWith('http://') || member.linkedIn.startsWith('https://'))) {
+                            const memberLinkedIn = document.createElement('a');
                             memberLinkedIn.href = member.linkedIn;
                             memberLinkedIn.textContent = 'LinkedIn Profile';
                             memberLinkedIn.target = '_blank';
                             memberLinkedIn.rel = 'noopener noreferrer';
-                            [cite_start]memberDiv.appendChild(memberLinkedIn); [cite: 264]
+                            memberDiv.appendChild(memberLinkedIn);
                         }
 
-                        [cite_start]teamContainer.appendChild(memberDiv); [cite: 265]
-                        [cite_start]membersRendered++; [cite: 265]
+                        teamContainer.appendChild(memberDiv);
+                        membersRendered++;
                     });
 
                     // Initialize team carousel after members are loaded
                     // We only need navigation if there are more members than can fit in one view
-                    if (teamMembers.length > getMembersPerView()) { // Use dynamic membersPerView
-                        [cite_start]prevTeamBtn.addEventListener('click', () => { showPrevTeamSlide(); resetAutoTeamSlide(); }); [cite: 266]
-                        [cite_start]nextTeamBtn.addEventListener('click', () => { showNextTeamSlide(); resetAutoTeamSlide(); }); [cite: 266]
-                        createTeamDots(); // Dots will now represent each slide
-                        [cite_start]updateTeamCarousel(); [cite: 267]
-                        [cite_start]startAutoTeamSlide(); [cite: 267]
-                    } else {
-                        // Hide buttons and dots if all members fit in one view
-                        [cite_start]prevTeamBtn.style.display = 'none'; [cite: 268]
-                        [cite_start]nextTeamBtn.style.display = 'none'; [cite: 268]
-                        [cite_start]teamCarouselDotsContainer.style.display = 'none'; [cite: 268]
-                    }
+                    updateTeamCarousel(); // Call once to set initial state and button visibility
+                    createTeamDots(); // Create dots based on initial view
+                    startAutoTeamSlide(); // Start auto-slide if applicable
+
                 } else {
-                    teamContainer.innerHTML = '<p class="p-8">No team members found after processing valid data rows. [cite_start]Check your sheet content and headers carefully.</p>'; [cite: 269]
-                    // Also hide buttons/dots if no members loaded
-                    [cite_start]prevTeamBtn.style.display = 'none'; [cite: 270]
-                    [cite_start]nextTeamBtn.style.display = 'none'; [cite: 270]
-                    [cite_start]teamCarouselDotsContainer.style.display = 'none'; [cite: 270]
+                    teamContainer.innerHTML = '<p class="p-8">No team members found after processing valid data rows. Check your sheet content and headers carefully.</p>';
+                    // Hide buttons/dots if no members loaded
+                    prevTeamBtn.style.display = 'none';
+                    nextTeamBtn.style.display = 'none';
+                    teamCarouselDotsContainer.style.display = 'none';
                 }
 
                 if (membersRendered > 0) {
-                    [cite_start]console.log(`Successfully rendered ${membersRendered} team members.`); [cite: 271]
+                    console.log(`Successfully rendered ${membersRendered} team members.`);
                 }
 
             } catch (error) {
-                [cite_start]console.error('Failed to fetch or parse Google Sheets team data:', error); [cite: 272]
-                teamContainer.innerHTML = '<p class="p-8">Error loading team members. [cite_start]Please ensure the Google Sheet is published correctly and you have an internet connection.</p>'; [cite: 273]
+                console.error('Failed to fetch or parse Google Sheets team data:', error);
+                teamContainer.innerHTML = '<p class="p-8">Error loading team members. Please ensure the Google Sheet is published correctly and you have an internet connection.</p>';
             }
         }
 
         // Add resize listener to handle responsive carousel adjustments
         window.addEventListener('resize', () => {
             // Recalculate and update carousel on resize to adjust to new membersPerView
-            // Reset index to 0 for simplicity, or implement more complex logic to maintain position
-            currentTeamSlideIndex = 0;
+            currentTeamSlideIndex = 0; // Reset index for consistent behavior on resize
             if (teamMembers.length > 0) {
                 updateTeamCarousel();
-                createTeamDots();
-                // Re-evaluate if buttons/dots should be shown
-                if (teamMembers.length > getMembersPerView()) {
-                    prevTeamBtn.style.display = '';
-                    nextTeamBtn.style.display = '';
-                    teamCarouselDotsContainer.style.display = '';
-                } else {
-                    prevTeamBtn.style.display = 'none';
-                    nextTeamBtn.style.display = 'none';
-                    teamCarouselDotsContainer.style.display = 'none';
-                }
+                createTeamDots(); // Recreate dots as the number of slides might change
             }
+            startAutoTeamSlide(); // Re-evaluate and restart auto-slide
         });
 
 
         // Call the function to fetch and display data when the page finishes loading
-        [cite_start]document.addEventListener('DOMContentLoaded', fetchTeamMembers); [cite: 274]
+        document.addEventListener('DOMContentLoaded', fetchTeamMembers);
     </script>
 
 </body>
