@@ -864,7 +864,8 @@
 
                         const memberAbout = document.createElement('p');
                         memberAbout.classList.add('description');
-                        memberAbout.textContent = member.about;
+                        // IMPORTANT CHANGE HERE: Use innerHTML and replace newlines with <br>
+                        memberAbout.innerHTML = member.about.replace(/\n/g, '<br>'); 
                         memberDiv.appendChild(memberAbout);
 
                         if (member.linkedIn && (member.linkedIn.startsWith('http://') || member.linkedIn.startsWith('https://'))) {
